@@ -33,6 +33,15 @@
       "kind": 1
     },
     {
+      "name": "WMKK",
+      "title": "吉隆坡国际",
+      "region": "WM",
+      "lat": 2.743333333,
+      "lng": 101.698055556,
+      "airport": "WMKK",
+      "kind": 1
+    },
+    {
       "name": "ZSHC",
       "title": "杭州萧山",
       "region": "ZS",
@@ -1268,6 +1277,393 @@
       ],
       "distanceNm": 431,
       "color": "#afacf9"
+    },
+    {
+      "id": "flight-004",
+      "date": null,
+      "dateSource": "用户未提供日期",
+      "fromCity": "曼谷",
+      "toCity": "吉隆坡",
+      "departureRunway": "01",
+      "arrivalRunway": "32L",
+      "sid": "REGO1U",
+      "star": "KAKA1G",
+      "starTransitions": [
+        "ALL"
+      ],
+      "approach": "I32L",
+      "approachTransition": "EGURI",
+      "route": "VTBS/01 REGO1U REGOS A464 UPNEP W19 ROBDA M757 KARMI Y507 KAKAK KAKA1G WMKK/EGURI.I32L",
+      "enroute": [
+        "REGOS",
+        "A464",
+        "UPNEP",
+        "W19",
+        "ROBDA",
+        "M757",
+        "KARMI",
+        "Y507",
+        "KAKAK"
+      ],
+      "color": "#a9d67c",
+      "from": "VTBS",
+      "to": "WMKK",
+      "points": [
+        {
+          "name": "RW01",
+          "lat": 13.656697222222222,
+          "lng": 100.75183055555556,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DE001",
+          "lat": 13.691713889,
+          "lng": 100.761033333,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PS010",
+          "lat": 13.703105556,
+          "lng": 100.931825,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "SUPIS",
+          "lat": 13.645405556,
+          "lng": 101.082997222,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SAMVA",
+          "lat": 13.552933333,
+          "lng": 101.057583333,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUSVU",
+          "lat": 13.342775,
+          "lng": 100.999925,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KASNI",
+          "lat": 13.080602778,
+          "lng": 100.6783,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "REGOS",
+          "lat": 12.001805556,
+          "lng": 100.58175,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "REGO1U",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DIRAX",
+          "lat": 11.001944444,
+          "lng": 100.546666667,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "A464",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TUSPU",
+          "lat": 10.33,
+          "lng": 100.518888889,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "A464",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UPNEP",
+          "lat": 9.703638889,
+          "lng": 100.493444444,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "A464",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ROBDA",
+          "lat": 9.432777778,
+          "lng": 100.586388889,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "W19",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LOSDA",
+          "lat": 8.898888889,
+          "lng": 100.573611111,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "M757",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OBLEX",
+          "lat": 7.496527778,
+          "lng": 100.541008333,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "M757",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KARMI",
+          "lat": 6.4944,
+          "lng": 100.5225,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "M757",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RINBA",
+          "lat": 5.3706,
+          "lng": 100.749877778,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y507",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BOGUK",
+          "lat": 4.962597222,
+          "lng": 100.814394444,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y507",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANBIK",
+          "lat": 4.459166667,
+          "lng": 100.893888889,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y507",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DUDAD",
+          "lat": 4.118194444,
+          "lng": 101.059958333,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y507",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KAKAK",
+          "lat": 3.769358333,
+          "lng": 101.229694444,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y507",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LIBKI",
+          "lat": 3.270352778,
+          "lng": 101.761438889,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RITLO",
+          "lat": 3.138205556,
+          "lng": 101.922825,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK811",
+          "lat": 3.114588889,
+          "lng": 101.992863889,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK812",
+          "lat": 3.073555556,
+          "lng": 102.054425,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK813",
+          "lat": 3.017905556,
+          "lng": 102.103319444,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK814",
+          "lat": 2.951433333,
+          "lng": 102.136219444,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK815",
+          "lat": 2.878666667,
+          "lng": 102.150888889,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK816",
+          "lat": 2.804563889,
+          "lng": 102.146330556,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EGURI",
+          "lat": 2.858991667,
+          "lng": 101.868666667,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "KAKA1G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK894",
+          "lat": 2.802875,
+          "lng": 101.785858333,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "I32L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK893",
+          "lat": 2.6263,
+          "lng": 101.904236111,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "I32L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK892",
+          "lat": 2.529083333,
+          "lng": 101.969394444,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "I32L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KARBO",
+          "lat": 2.469494444,
+          "lng": 101.881522222,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "I32L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FF32L",
+          "lat": 2.565013889,
+          "lng": 101.817502778,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "I32L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW32L",
+          "lat": 2.7132944444444447,
+          "lng": 101.71806388888889,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 100,
+          "via": "I32L",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 782
     }
   ]
 }
