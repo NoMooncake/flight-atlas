@@ -3,6 +3,8 @@
 .cesium-widget canvas{display:block;outline:none}
 .map-heading>.eyebrow,.map-actions,.map-zoom button,.map-bottom>div,.waypoint-toggle,.map-legend{background:#10212ce8;color:#dce7ef;border-color:#91b5ca30;box-shadow:0 2px 14px #0002;backdrop-filter:blur(10px)}
 .map-heading>.eyebrow{letter-spacing:1px}
+/* Opaque controls avoid repeated backdrop sampling over the moving WebGL canvas. */
+.map-heading>.eyebrow,.map-actions,.map-zoom button,.map-bottom>div,.waypoint-toggle,.map-legend{background:#10212cf5;backdrop-filter:none}
 .map-actions button{color:#a9becd}.map-actions button:hover{color:#fff}
 .map-actions button.active{background:#395363;color:#fff4dc}
 .map-zoom button:hover{background:#2b4657}.map-zoom .north-indicator{font-size:12px;height:30px;margin:0 0 5px}

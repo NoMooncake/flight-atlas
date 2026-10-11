@@ -3,6 +3,8 @@ const $ = id => document.getElementById(id);
 const C = window.Cesium;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let viewer, data, selected = null;
+let cameraMoving=false, settleTimer, lastHudUpdate=0;
+const restingScale=Math.min(devicePixelRatio,1.25);
 const routeEntities = [], airportEntities = [], waypointEntities = [];
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const position = p => C.Cartesian3.fromDegrees(p.lng, p.lat, 15);
@@ -77,12 +79,21 @@ function showOverview() {
 function label(text,airport) {
   return {text,font:airport?'12px "Microsoft YaHei", sans-serif':'11px Consolas, monospace',fillColor:C.Color.WHITE,outlineColor:C.Color.BLACK,outlineWidth:2,style:C.LabelStyle.FILL_AND_OUTLINE,showBackground:true,backgroundColor:C.Color.fromCssColorString('#10212ce6'),backgroundPadding:new C.Cartesian2(6,4),horizontalOrigin:C.HorizontalOrigin.LEFT,verticalOrigin:C.VerticalOrigin.CENTER,pixelOffset:new C.Cartesian2(12,0),disableDepthTestDistance:Number.POSITIVE_INFINITY,show:false};
 }
+function routeRuns(f) {
+  const runs=[];
+  for(let i=1;i<f.points.length;i++) {
+    const approx=!!f.points[i].approxFromPrevious;
+    const last=runs.at(-1);
+    if(last&&last.approx===approx)last.points.push(f.points[i]);
+    else runs.push({approx,points:[f.points[i-1],f.points[i]]});
+  }
+  return runs;
+}
 function drawRoutes() {
   for (const f of data.flights) {
-    for (let i=1;i<f.points.length;i++) {
-      const a=f.points[i-1], b=f.points[i];
-      const entity=viewer.entities.add({name:`${a.name} → ${b.name}`,properties:{flightId:f.id},polyline:{positions:[position(a),position(b)],clampToGround:true,width:3,arcType:C.ArcType.GEODESIC,material:C.Color.fromCssColorString(f.color)}});
-      routeEntities.push({entity,flightId:f.id,color:f.color,approx:!!b.approxFromPrevious});
+    for (const run of routeRuns(f)) {
+      const entity=viewer.entities.add({name:`${f.fromCity} → ${f.toCity}`,properties:{flightId:f.id},polyline:{positions:run.points.map(position),clampToGround:true,width:3,arcType:C.ArcType.GEODESIC,material:C.Color.fromCssColorString(f.color)}});
+      routeEntities.push({entity,flightId:f.id,color:f.color,approx:run.approx});
     }
   }
   for (const a of data.airports) {
@@ -103,6 +114,9 @@ function drawRoutes() {
 }
 function updateLabels() {
   if(!viewer)return;
+  updateCameraReadout();
+  // Points and routes keep moving with the globe; text is placed once it settles.
+  if(cameraMoving)return;
   const scene=viewer.scene, canvas=viewer.canvas, occupied=[];
   const occluder=new C.EllipsoidalOccluder(C.Ellipsoid.WGS84,viewer.camera.positionWC);
   const altitude=viewer.camera.positionCartographic.height;
@@ -124,9 +138,33 @@ function updateLabels() {
     }
   };
   airportEntities.forEach(i=>place(i,true)); waypointEntities.forEach(i=>place(i,false));
-  $('camera-distance').textContent=altitude>=1000000?`${(altitude/1000000).toFixed(1)} 千公里`: `${Math.round(altitude/1000).toLocaleString()} 公里`;
-  $('zoom-in').disabled=altitude<=210; $('zoom-out').disabled=altitude>=39000000;
   scene.requestRender();
+}
+function updateCameraReadout() {
+  const altitude=viewer.camera.positionCartographic.height;
+  const text=altitude>=1000000?`${(altitude/1000000).toFixed(1)} 千公里`: `${Math.round(altitude/1000).toLocaleString()} 公里`;
+  if($('camera-distance').textContent!==text)$('camera-distance').textContent=text;
+  $('zoom-in').disabled=altitude<=210; $('zoom-out').disabled=altitude>=39000000;
+}
+function beginCameraMotion() {
+  clearTimeout(settleTimer);
+  if(cameraMoving)return;
+  cameraMoving=true;
+  viewer.resolutionScale=.75;
+  viewer.scene.globe.maximumScreenSpaceError=3;
+  $('map').dataset.renderQuality='moving';
+  for(const item of [...airportEntities,...waypointEntities])item.entity.label.show=false;
+  viewer.scene.requestRender();
+}
+function endCameraMotion() {
+  clearTimeout(settleTimer);
+  settleTimer=setTimeout(()=>{
+    cameraMoving=false;
+    viewer.resolutionScale=restingScale;
+    viewer.scene.globe.maximumScreenSpaceError=1.5;
+    $('map').dataset.renderQuality='resting';
+    updateLabels();
+  },180);
 }
 function zoom(factor) {
   const camera=viewer.camera;camera.cancelFlight();
@@ -174,7 +212,9 @@ async function init() {
     viewer.scene.globe.enableLighting=false;
     viewer.scene.globe.maximumScreenSpaceError=1.5;
     viewer.scene.skyAtmosphere.show=true;
-    viewer.resolutionScale=Math.min(devicePixelRatio,2);
+    viewer.useBrowserRecommendedResolution=true;
+    viewer.resolutionScale=restingScale;
+    $('map').dataset.renderQuality='resting';
     const controls=viewer.scene.screenSpaceCameraController;
     controls.enableTilt=false;controls.enableLook=false;
     controls.minimumZoomDistance=200;controls.maximumZoomDistance=40000000;
@@ -187,8 +227,18 @@ async function init() {
       const actions={ArrowLeft:()=>viewer.camera.rotateLeft(angle),ArrowRight:()=>viewer.camera.rotateRight(angle),ArrowUp:()=>viewer.camera.rotateUp(angle),ArrowDown:()=>viewer.camera.rotateDown(angle),'+':()=>zoom(.65),'=':()=>zoom(.65),'-':()=>zoom(1.5)};
       if(actions[event.key]){event.preventDefault();actions[event.key]();updateLabels();}
     });
-    viewer.camera.changed.addEventListener(updateLabels);
-    viewer.camera.moveEnd.addEventListener(updateLabels);
+    // Track actual pose, since canvas resizing also raises camera movement events.
+    const sampledPosition=C.Cartesian3.clone(viewer.camera.positionWC),sampledDirection=C.Cartesian3.clone(viewer.camera.directionWC),sampledUp=C.Cartesian3.clone(viewer.camera.upWC);
+    viewer.scene.postUpdate.addEventListener(()=>{
+      const camera=viewer.camera;
+      if(C.Cartesian3.equalsEpsilon(camera.positionWC,sampledPosition,1e-9)&&C.Cartesian3.equalsEpsilon(camera.directionWC,sampledDirection,1e-9)&&C.Cartesian3.equalsEpsilon(camera.upWC,sampledUp,1e-9))return;
+      C.Cartesian3.clone(camera.positionWC,sampledPosition);C.Cartesian3.clone(camera.directionWC,sampledDirection);C.Cartesian3.clone(camera.upWC,sampledUp);
+      beginCameraMotion();endCameraMotion();
+    });
+    viewer.camera.changed.addEventListener(()=>{
+      const now=performance.now();
+      if(now-lastHudUpdate>120){lastHudUpdate=now;updateCameraReadout();}
+    });
     viewer.scene.renderError.addEventListener(()=>{ $('loading').hidden=true;message('地球渲染中断，请刷新页面，并确认浏览器已启用硬件加速。'); });
     drawRoutes();selectFlight(null);mode('world');
     const last=data.flights.at(-1).points.at(-1);
