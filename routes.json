@@ -1,7 +1,7 @@
 {
   "title": "飞行足迹",
   "cycle": "2610",
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610",
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
@@ -33,6 +33,15 @@
       "kind": 1
     },
     {
+      "name": "ZSHC",
+      "title": "杭州萧山",
+      "region": "ZS",
+      "lat": 30.228333333,
+      "lng": 120.433333333,
+      "airport": "ZSHC",
+      "kind": 1
+    },
+    {
       "name": "ZSPD",
       "title": "上海浦东",
       "region": "ZS",
@@ -43,6 +52,197 @@
     }
   ],
   "flights": [
+    {
+      "id": "flight-000",
+      "date": null,
+      "dateLabel": "早期练习",
+      "dateSource": "用户未提供日期",
+      "from": "ZSHC",
+      "to": "ZSPD",
+      "fromCity": "杭州",
+      "toCity": "上海",
+      "departureRunway": "24",
+      "arrivalRunway": "17L",
+      "sid": "SUPA8D",
+      "star": "ANDP",
+      "approach": "I17LY",
+      "approachTransition": "PDL",
+      "route": "ZSHC/24 SUPA8D SUPAR DCT OKTUG B221 AND ANDP ZSPD/PDL.I17LY",
+      "enroute": [
+        "SUPAR",
+        "DCT",
+        "OKTUG",
+        "B221",
+        "AND"
+      ],
+      "points": [
+        {
+          "name": "RW24",
+          "lat": 30.252141666666667,
+          "lng": 120.43976111111111,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DER24",
+          "lat": 30.238188889,
+          "lng": 120.408294444,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HC601",
+          "lat": 30.141388889,
+          "lng": 120.190833333,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HC307",
+          "lat": 29.996111111,
+          "lng": 120.275,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HC306",
+          "lat": 30.125833333,
+          "lng": 120.566388889,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HC606",
+          "lat": 30.089722222,
+          "lng": 120.669722222,
+          "airport": "ZSHC",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUPAR",
+          "lat": 30.023055556,
+          "lng": 120.858055556,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "SUPA8D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OKTUG",
+          "lat": 30.088611111,
+          "lng": 120.960277778,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "DCT",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AND",
+          "lat": 30.256666667,
+          "lng": 121.221666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "D202X",
+          "lat": 30.552633333,
+          "lng": 121.747769444,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "ANDP",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "XSY",
+          "lat": 30.931666667,
+          "lng": 121.873333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "ANDP",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PDL",
+          "lat": 31.13,
+          "lng": 121.671666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "ANDP",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "D348P",
+          "lat": 31.384144444,
+          "lng": 121.575397222,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "I17LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CF17L",
+          "lat": 31.357119444,
+          "lng": 121.711891667,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "I17LY",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "FI17L",
+          "lat": 31.306288889,
+          "lng": 121.73115,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "I17LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW17L",
+          "lat": 31.16122222222222,
+          "lng": 121.78599444444444,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 100,
+          "via": "I17LY",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 189,
+      "color": "#ef9eaf"
+    },
     {
       "id": "flight-001",
       "date": "2026-10-08",

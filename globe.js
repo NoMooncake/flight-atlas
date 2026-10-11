@@ -17,6 +17,7 @@ function mode(id) {
 function message(text) { $('error').textContent = text; $('error').hidden = !text; }
 function renderList() {
   document.querySelector('.intro .eyebrow').textContent = `我的世界航迹 / 001—${String(data.flights.length).padStart(3,'0')}`;
+  document.querySelector('.intro .subtitle').textContent = `从${data.flights[0].fromCity}出发，旅程正在继续。`;
   $('flight-count').textContent = data.flights.length;
   $('airport-count').textContent = data.airports.length;
   $('total-distance').textContent = data.flights.reduce((s,f) => s + f.distanceNm, 0).toLocaleString();
@@ -24,7 +25,7 @@ function renderList() {
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'flight'; b.dataset.id = f.id;
     b.style.setProperty('--flight-color', f.color); b.setAttribute('aria-pressed','false');
-    b.innerHTML = `<span class="number">${String(i+1).padStart(2,'0')}</span><span><span class="city-pair">${esc(f.fromCity)}<span class="arrow">→</span>${esc(f.toCity)}</span><span class="route-airports" style="display:block">${esc(f.from)} — ${esc(f.to)}</span><span class="metadata"><span>${esc(f.date.replaceAll('-','.'))}</span><span>约 ${f.distanceNm} 海里</span></span></span><span class="chevron">›</span>`;
+    b.innerHTML = `<span class="number">${String(i+1).padStart(2,'0')}</span><span><span class="city-pair">${esc(f.fromCity)}<span class="arrow">→</span>${esc(f.toCity)}</span><span class="route-airports" style="display:block">${esc(f.from)} — ${esc(f.to)}</span><span class="metadata"><span>${esc(f.date ? f.date.replaceAll('-','.') : (f.dateLabel || '日期未记录'))}</span><span>约 ${f.distanceNm} 海里</span></span></span><span class="chevron">›</span>`;
     b.onclick = () => selectFlight(f.id); $('flights').append(b);
   });
 }
