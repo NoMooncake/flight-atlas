@@ -1,0 +1,1073 @@
+{
+  "title": "飞行足迹",
+  "cycle": "2610",
+  "updated": "2026-10-10",
+  "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610",
+  "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
+  "airports": [
+    {
+      "name": "VHHH",
+      "title": "香港国际",
+      "region": "VH",
+      "lat": 22.308888889,
+      "lng": 113.914722222,
+      "airport": "VHHH",
+      "kind": 1
+    },
+    {
+      "name": "VTBS",
+      "title": "素万那普",
+      "region": "VT",
+      "lat": 13.685833333,
+      "lng": 100.748888889,
+      "airport": "VTBS",
+      "kind": 1
+    },
+    {
+      "name": "VVTS",
+      "title": "新山一",
+      "region": "VV",
+      "lat": 10.820555556,
+      "lng": 106.660833333,
+      "airport": "VVTS",
+      "kind": 1
+    },
+    {
+      "name": "ZSPD",
+      "title": "上海浦东",
+      "region": "ZS",
+      "lat": 31.145,
+      "lng": 121.793333333,
+      "airport": "ZSPD",
+      "kind": 1
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-001",
+      "date": "2026-10-08",
+      "dateSource": "用户截图",
+      "from": "ZSPD",
+      "to": "VHHH",
+      "fromCity": "上海",
+      "toCity": "香港",
+      "departureRunway": "34L",
+      "arrivalRunway": "07C",
+      "sid": "ANDJ",
+      "star": "ABEY4A",
+      "approach": "I07C",
+      "approachTransition": "LIMES",
+      "route": "ZSPD/34L ANDJ AND G204 SHZ B221 LJG A470 MAGOG V512 ABBEY ABEY4A VHHH/LIMES.I07C",
+      "enroute": [
+        "AND",
+        "G204",
+        "SHZ",
+        "B221",
+        "LJG",
+        "A470",
+        "MAGOG",
+        "V512",
+        "ABBEY"
+      ],
+      "points": [
+        {
+          "name": "RW34L",
+          "lat": 31.126350000000002,
+          "lng": 121.82407222222221,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DE34L",
+          "lat": 31.15895,
+          "lng": 121.811772222,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "ANDJ",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "D142L",
+          "lat": 31.222536111,
+          "lng": 122.006855556,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "ANDJ",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "XSY",
+          "lat": 30.931666667,
+          "lng": 121.873333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "ANDJ",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "D062R",
+          "lat": 30.419852778,
+          "lng": 121.501327778,
+          "airport": "ZSPD",
+          "region": "ZS",
+          "kind": 11,
+          "via": "ANDJ",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AND",
+          "lat": 30.256666667,
+          "lng": 121.221666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "ANDJ",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VEXEX",
+          "lat": 29.973055556,
+          "lng": 121.045833333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "G204",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SHZ",
+          "lat": 29.6,
+          "lng": 120.816666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "G204",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "REMIM",
+          "lat": 28.858888889,
+          "lng": 120.74,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PAMVU",
+          "lat": 28.691666667,
+          "lng": 120.721666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PEXIB",
+          "lat": 28.443333333,
+          "lng": 120.696666667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AREPI",
+          "lat": 28.0275,
+          "lng": 120.655833333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DST",
+          "lat": 27.75,
+          "lng": 120.63,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UBDIX",
+          "lat": 27.368611111,
+          "lng": 120.358055556,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUPOX",
+          "lat": 27.127222222,
+          "lng": 120.1875,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MUDOD",
+          "lat": 26.863055556,
+          "lng": 120.0,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANLUD",
+          "lat": 26.469166667,
+          "lng": 119.722777778,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LJG",
+          "lat": 26.22,
+          "lng": 119.548333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "B221",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FQG",
+          "lat": 25.74,
+          "lng": 119.385,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENVEN",
+          "lat": 25.341666667,
+          "lng": 118.918333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ATSAB",
+          "lat": 25.093333333,
+          "lng": 118.618333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AMURI",
+          "lat": 24.700277778,
+          "lng": 118.168611111,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "XLN",
+          "lat": 24.565,
+          "lng": 118.015,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TEBON",
+          "lat": 24.138055556,
+          "lng": 117.501111111,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IKATA",
+          "lat": 23.765,
+          "lng": 117.136111111,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SWA",
+          "lat": 23.44,
+          "lng": 116.766666667,
+          "airport": "ENRT",
+          "region": "ZG",
+          "kind": 3,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BEBEM",
+          "lat": 22.95,
+          "lng": 116.360555556,
+          "airport": "ENRT",
+          "region": "ZG",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DOTMI",
+          "lat": 22.718333333,
+          "lng": 116.168333333,
+          "airport": "ENRT",
+          "region": "ZG",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAGOG",
+          "lat": 22.296111111,
+          "lng": 115.825,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "A470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENPET",
+          "lat": 22.292544444,
+          "lng": 115.6901,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "V512",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FISHA",
+          "lat": 22.282677778,
+          "lng": 115.336558333,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "V512",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ABBEY",
+          "lat": 22.269722222,
+          "lng": 114.923866667,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "V512",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MUSEL",
+          "lat": 22.264997222,
+          "lng": 114.781147222,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "ABEY4A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HH512",
+          "lat": 22.022722222,
+          "lng": 114.532416667,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "ABEY4A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HH511",
+          "lat": 21.892288889,
+          "lng": 114.192219444,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "ABEY4A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LIMES",
+          "lat": 22.107111111,
+          "lng": 113.775722222,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "ABEY4A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TONIC",
+          "lat": 22.2133,
+          "lng": 113.722736111,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "I07C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VH710",
+          "lat": 22.266333333,
+          "lng": 113.759891667,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "I07C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VH711",
+          "lat": 22.284619444,
+          "lng": 113.816461111,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "I07C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW07C",
+          "lat": 22.31127222222222,
+          "lng": 113.89906666666667,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 100,
+          "via": "I07C",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 809,
+      "color": "#f5ba68"
+    },
+    {
+      "id": "flight-002",
+      "date": "2026-10-10",
+      "dateSource": "用户截图",
+      "from": "VHHH",
+      "to": "VVTS",
+      "fromCity": "香港",
+      "toCity": "胡志明市",
+      "departureRunway": "07R",
+      "arrivalRunway": "25R",
+      "sid": "PECA3A",
+      "star": "VETO5G",
+      "approach": "I25RW",
+      "approachTransition": "BOMSU",
+      "route": "VHHH/07R PECA3A PECAN V11 LAXET V12 EPDOS L642 SOSPA W15 VETOM VETO5G VVTS/BOMSU.I25RW",
+      "enroute": [
+        "PECAN",
+        "V11",
+        "LAXET",
+        "V12",
+        "EPDOS",
+        "L642",
+        "SOSPA",
+        "W15",
+        "VETOM"
+      ],
+      "points": [
+        {
+          "name": "RW07R",
+          "lat": 22.296675,
+          "lng": 113.89944166666668,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HH301",
+          "lat": 22.324725,
+          "lng": 113.986558333,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PORPA",
+          "lat": 22.335861111,
+          "lng": 114.021194444,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HH311",
+          "lat": 22.247872222,
+          "lng": 114.086869444,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RAMEN",
+          "lat": 22.160894444,
+          "lng": 114.086080556,
+          "airport": "VHHH",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VEDVO",
+          "lat": 22.077275,
+          "lng": 114.261958333,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SEGPO",
+          "lat": 21.959102778,
+          "lng": 114.355163889,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SOSLU",
+          "lat": 21.645563889,
+          "lng": 114.088441667,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PECAN",
+          "lat": 21.438941667,
+          "lng": 114.0349,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "PECA3A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LAXET",
+          "lat": 20.937936111,
+          "lng": 114.001422222,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "V11",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EPDOS",
+          "lat": 19.0,
+          "lng": 113.555,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "V12",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENBOK",
+          "lat": 18.556666667,
+          "lng": 113.491666667,
+          "airport": "ENRT",
+          "region": "VH",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EPKAL",
+          "lat": 17.858333333,
+          "lng": 112.955,
+          "airport": "ENRT",
+          "region": "ZJ",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EGEMU",
+          "lat": 17.0,
+          "lng": 112.283333333,
+          "airport": "ENRT",
+          "region": "ZJ",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EXOTO",
+          "lat": 15.358333333,
+          "lng": 111.05,
+          "airport": "ENRT",
+          "region": "ZJ",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VEPAM",
+          "lat": 13.966666667,
+          "lng": 110.0,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KARAN",
+          "lat": 12.648888889,
+          "lng": 109.156666667,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SOSPA",
+          "lat": 11.833888889,
+          "lng": 108.640833333,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "L642",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LKH",
+          "lat": 11.754138889,
+          "lng": 108.355194444,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 3,
+          "via": "W15",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIXEX",
+          "lat": 11.603688889,
+          "lng": 108.138697222,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "W15",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VETOM",
+          "lat": 11.233055556,
+          "lng": 107.6075,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "W15",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DALAP",
+          "lat": 11.014155556,
+          "lng": 107.389397222,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANSUP",
+          "lat": 10.980747222,
+          "lng": 107.231133333,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS448",
+          "lat": 11.075475,
+          "lng": 107.194747222,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS446",
+          "lat": 11.153488889,
+          "lng": 107.133055556,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS444",
+          "lat": 11.210261111,
+          "lng": 107.050927778,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS442",
+          "lat": 11.240816667,
+          "lng": 106.955555556,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BOMSU",
+          "lat": 10.910527778,
+          "lng": 106.899805556,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "VETO5G",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS426",
+          "lat": 10.884027778,
+          "lng": 106.820083333,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "I25RW",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS424",
+          "lat": 10.860777778,
+          "lng": 106.758361111,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "I25RW",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW25R",
+          "lat": 10.824855555555555,
+          "lng": 106.66317500000001,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 100,
+          "via": "I25RW",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [],
+      "distanceNm": 902,
+      "color": "#6ad9d1"
+    },
+    {
+      "id": "flight-003",
+      "date": "2026-10-10",
+      "dateSource": "用户截图",
+      "from": "VVTS",
+      "to": "VTBS",
+      "fromCity": "胡志明市",
+      "toCity": "曼谷",
+      "departureRunway": "25L",
+      "arrivalRunway": "02L",
+      "sid": "SAPE5A",
+      "star": "TUMG2D",
+      "approach": "R02L",
+      "approachTransition": null,
+      "route": "VVTS/25L SAPE5A SAPEN R468 TIA P629 NUGPA TUMG2D VTBS/R02L",
+      "enroute": [
+        "SAPEN",
+        "R468",
+        "TIA",
+        "P629",
+        "NUGPA"
+      ],
+      "points": [
+        {
+          "name": "RW25L",
+          "lat": 10.82371388888889,
+          "lng": 106.66953055555555,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TS616",
+          "lat": 10.772541667,
+          "lng": 106.534675,
+          "airport": "VVTS",
+          "region": "VV",
+          "kind": 11,
+          "via": "SAPE5A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SAPEN",
+          "lat": 11.02,
+          "lng": 106.183333333,
+          "airport": "ENRT",
+          "region": "VV",
+          "kind": 11,
+          "via": "SAPE5A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELMOP",
+          "lat": 11.11035,
+          "lng": 105.953775,
+          "airport": "ENRT",
+          "region": "VD",
+          "kind": 11,
+          "via": "R468",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VISIM",
+          "lat": 11.157080556,
+          "lng": 105.744347222,
+          "airport": "ENRT",
+          "region": "VD",
+          "kind": 11,
+          "via": "R468",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TIA",
+          "lat": 11.343,
+          "lng": 104.903944444,
+          "airport": "ENRT",
+          "region": "VD",
+          "kind": 3,
+          "via": "R468",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PUKIP",
+          "lat": 11.781711111,
+          "lng": 104.187513889,
+          "airport": "ENRT",
+          "region": "VD",
+          "kind": 11,
+          "via": "P629",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ATVOP",
+          "lat": 11.907288889,
+          "lng": 103.981452778,
+          "airport": "ENRT",
+          "region": "VD",
+          "kind": 11,
+          "via": "P629",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VAPVU",
+          "lat": 12.783630556,
+          "lng": 102.530197222,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "P629",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLDIR",
+          "lat": 12.900277778,
+          "lng": 102.223611111,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "P629",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NUGPA",
+          "lat": 13.048377778,
+          "lng": 101.833136111,
+          "airport": "ENRT",
+          "region": "VT",
+          "kind": 11,
+          "via": "P629",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TUMGA",
+          "lat": 13.354169444,
+          "lng": 101.201047222,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS414",
+          "lat": 13.570983333,
+          "lng": 101.18655,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS413",
+          "lat": 13.61445,
+          "lng": 101.021330556,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS412",
+          "lat": 13.631816667,
+          "lng": 100.955197222,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS411",
+          "lat": 13.662161111,
+          "lng": 100.839452778,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS422",
+          "lat": 13.564202778,
+          "lng": 100.812652778,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS410",
+          "lat": 13.466238889,
+          "lng": 100.785872222,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENKAA",
+          "lat": 13.385461111,
+          "lng": 100.763725,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "TUMG2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ABVER",
+          "lat": 13.485536111,
+          "lng": 100.682072222,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "R02L",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "BS670",
+          "lat": 13.586213889,
+          "lng": 100.708519444,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "R02L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BS671",
+          "lat": 13.665175,
+          "lng": 100.729244444,
+          "airport": "VTBS",
+          "region": "VT",
+          "kind": 11,
+          "via": "R02L",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 431,
+      "color": "#afacf9"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b131b"><meta name="description" content="把每一次模拟飞行，连成一张属于自己的世界地图。">
+  <title>飞行足迹 · 我的世界航迹</title>
+  <link rel="stylesheet" href="./assets/leaflet.css"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./map.css">
+  <script src="./assets/leaflet.js" defer></script><script src="./map.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="飞行足迹首页"><span class="brand-mark">↗</span><span>飞行足迹<small>THE FLIGHT ATLAS</small></span></a>
+  <div class="top-caption">每一次起落，都让世界更近一点。</div>
+  <span class="private-label"><span></span> 我的环球飞行记录</span>
+</header>
+<main>
+  <aside class="journal">
+    <div class="intro"><p class="eyebrow">我的世界航迹 / 001—003</p><h1>把飞过的地方，<br>连成一个世界。</h1><p class="subtitle">从上海出发，旅程正在继续。</p></div>
+    <div class="stats"><div><strong id="flight-count">3</strong><span>已完成航段</span></div><div><strong id="airport-count">4</strong><span>到访机场</span></div><div><strong id="total-distance">2,142</strong><span>航路海里 · 约</span></div></div>
+    <div class="list-heading"><h2>我的航程</h2><span>按飞行顺序</span></div>
+    <nav id="flights" aria-label="已完成航段"></nav>
+    <section class="detail" aria-live="polite"><div class="detail-top"><span class="eyebrow" id="detail-caption">旅程进度</span><span id="detail-count">03 / 已抵达</span></div><h2 id="detail-title">此刻，曼谷。</h2><p id="detail-description">上海 → 香港 → 胡志明市 → 曼谷</p><details id="route-details" hidden><summary>查看完整航路与航点</summary><p id="raw-route"></p><p id="waypoint-chain"></p></details><p id="route-notes" class="route-notes"></p></section>
+    <footer class="journal-footer"><span class="status-dot"></span>下一段旅程，待续。<p>航路按 AIRAC 2610 航点重建，非实飞轨迹。<br>虚线表示引导或非定点航段的示意连接。</p></footer>
+  </aside>
+  <section class="earth-panel" aria-label="二维地形航路地图">
+    <div class="map-heading"><span class="eyebrow" id="map-level">地形 · 国家边界 · 城市</span><div class="map-actions"><button id="overview" class="active" type="button">航程总览</button><button id="world" type="button">世界地图</button></div></div>
+    <div id="map" aria-label="航路地图：拖动平移，滚轮或加减按钮缩放。"></div>
+    <div id="loading" class="loading" role="status"><span class="loader"></span>正在展开你的世界…</div>
+    <div id="error" class="error" role="alert" hidden>底图暂时未能加载，请检查网络后刷新。航程记录仍可在左侧查看。</div>
+    <div class="map-legend"><span class="line-swatch"></span><span>已完成航路</span><span class="dash-swatch"></span><span>示意连接</span></div>
+    <div class="map-zoom"><span class="north-indicator">N ↑</span><button type="button" id="zoom-in" aria-label="放大">＋</button><button type="button" id="zoom-out" aria-label="缩小">−</button></div>
+    <div class="map-bottom"><div><span class="drag-icon">⤢</span> 拖动平移 <span class="separator">/</span> 滚轮缩放</div><label class="waypoint-toggle"><input id="show-waypoints" type="checkbox"> 显示航点</label></div>
+  </section>
+</main>
+</body></html>
