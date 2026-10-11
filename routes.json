@@ -1280,8 +1280,8 @@
     },
     {
       "id": "flight-004",
-      "date": null,
-      "dateSource": "用户未提供日期",
+      "date": "2026-10-11",
+      "dateSource": "用户确认：今天（2026-10-11）",
       "fromCity": "曼谷",
       "toCity": "吉隆坡",
       "departureRunway": "01",
