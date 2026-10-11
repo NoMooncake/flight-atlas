@@ -1,0 +1,30 @@
+.earth-panel,#map{background:#07111b;color:#eaf0f3}
+.cesium-viewer,.cesium-viewer-cesiumWidgetContainer,.cesium-widget,.cesium-widget canvas{width:100%;height:100%}
+.cesium-widget canvas{display:block;outline:none}
+.map-heading>.eyebrow,.map-actions,.map-zoom button,.map-bottom>div,.waypoint-toggle,.map-legend{background:#10212ce8;color:#dce7ef;border-color:#91b5ca30;box-shadow:0 2px 14px #0002;backdrop-filter:blur(10px)}
+.map-heading>.eyebrow{letter-spacing:1px}
+.map-actions button{color:#a9becd}.map-actions button:hover{color:#fff}
+.map-actions button.active{background:#395363;color:#fff4dc}
+.map-zoom button:hover{background:#2b4657}.map-zoom .north-indicator{font-size:12px;height:30px;margin:0 0 5px}
+.map-bottom .drag-icon{color:#b4ccdb}.waypoint-toggle input{accent-color:#f5ba68}
+.line-swatch{background:#f5ba68}.dash-swatch{border-color:#b8c8d3}
+.map-bottom{bottom:64px}.map-legend{bottom:114px}
+.camera-distance{position:absolute;z-index:800;bottom:37px;left:30px;font-size:10px;color:#b0c4d2;pointer-events:none;text-shadow:0 1px 3px #000}
+#map-credits{position:absolute;z-index:801;left:0;right:0;bottom:0;padding:4px 10px;background:#07111bbd;font-size:10px;line-height:1.4;color:#c5d1da;max-height:58px;overflow-y:auto}
+#map-credits a{color:#d6e1e8}#map-credits img{max-height:22px;width:auto;vertical-align:middle}
+#map-credits .cesium-widget-credits{position:static;display:block;padding:0;color:inherit;text-shadow:none;font-size:inherit}
+#map-credits .cesium-credit-textContainer{display:inline!important}
+.cesium-credit-lightbox-overlay{z-index:1200}
+.loading{background:#122431ed;color:#dce8f1;pointer-events:none}
+.error{top:auto;bottom:163px;left:30px;right:80px;padding:10px 14px;background:#162c3bec;color:#e6d6ba;font-size:11px;text-align:left;pointer-events:none}
+#waypoint-card{position:absolute;z-index:900;top:80px;left:30px;max-width:calc(100% - 105px);background:#142a38f5;border:1px solid #7898ac66;border-radius:8px;padding:14px 34px 12px 16px;box-shadow:0 6px 24px #0004}
+#waypoint-card strong{font:14px Consolas,monospace;color:#f5d09b}#waypoint-card p{font-size:11px;color:#b8ccda;margin:6px 0 0}
+#close-waypoint{position:absolute;right:6px;top:3px;border:0;background:none;color:#b8ccda;font-size:22px}
+@media(max-width:1120px){.map-heading{gap:6px}.map-heading>.eyebrow{font-size:9px;letter-spacing:0}.camera-distance{left:18px}}
+@media(max-width:760px){
+ .map-bottom{bottom:64px}.map-legend{bottom:70px}.camera-distance{left:12px;bottom:39px;font-size:9px}
+ #map-credits{font-size:8px;padding:3px 7px;max-height:36px}#map-credits img{max-height:17px}
+ .error{bottom:105px;left:12px;right:55px;font-size:10px;padding:7px 9px}
+ .map-zoom .north-indicator{height:24px;font-size:10px;margin-bottom:0}
+ #waypoint-card{top:66px;left:12px}
+}
