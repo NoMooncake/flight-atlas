@@ -4,7 +4,7 @@ let map,data,selected=null,routeLayers=[],airportsLayer,waypointsLayer;
 const palette=['#b56b12','#00868c','#7350b2'];
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const coordinates=f=>f.points.map(p=>[p.lat,p.lng]);
-const fit=points=>map.fitBounds(L.latLngBounds(points),{paddingTopLeft:[45,90],paddingBottomRight:[65,115],maxZoom:9,animate:false});
+const fit=points=>{const size=map.getSize(),compact=size.y<450||size.x<500;map.fitBounds(L.latLngBounds(points),{paddingTopLeft:compact?[24,58]:[45,80],paddingBottomRight:compact?[48,90]:[65,115],maxZoom:9,animate:false});};
 function mode(id){['overview','world'].forEach(k=>$(k).classList.toggle('active',k===id));}
 function selectFlight(id){
  selected=id;document.querySelectorAll('.flight').forEach(b=>{b.classList.toggle('selected',b.dataset.id===id);b.setAttribute('aria-pressed',String(b.dataset.id===id));});
