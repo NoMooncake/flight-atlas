@@ -42,6 +42,15 @@
       "kind": 1
     },
     {
+      "name": "WSSS",
+      "title": "新加坡樟宜",
+      "region": "WS",
+      "lat": 1.359211111,
+      "lng": 103.989325,
+      "airport": "WSSS",
+      "kind": 1
+    },
+    {
       "name": "ZSHC",
       "title": "杭州萧山",
       "region": "ZS",
@@ -1664,6 +1673,184 @@
         "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
       ],
       "distanceNm": 782
+    },
+    {
+      "id": "flight-005",
+      "date": "2026-10-11",
+      "dateSource": "用户确认：今天（2026-10-11）",
+      "fromCity": "吉隆坡",
+      "toCity": "新加坡",
+      "departureRunway": "32R",
+      "arrivalRunway": "20R",
+      "sid": "RUSB1D",
+      "star": "LELI3B",
+      "approach": "R20R",
+      "approachTransition": "BIDUS",
+      "route": "WMKK/32R RUSB1D RUSBU Y511 TOPOR A464 ARAMA LELI3B WSSS/BIDUS.R20R",
+      "enroute": [
+        "RUSBU",
+        "Y511",
+        "TOPOR",
+        "A464",
+        "ARAMA"
+      ],
+      "color": "#79baff",
+      "from": "WMKK",
+      "to": "WSSS",
+      "points": [
+        {
+          "name": "RW32R",
+          "lat": 2.7483416666666667,
+          "lng": 101.72205833333334,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK701",
+          "lat": 2.794127778,
+          "lng": 101.691291667,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "RUSB1D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK702",
+          "lat": 2.914061111,
+          "lng": 101.647958333,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "RUSB1D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KK706",
+          "lat": 2.957027778,
+          "lng": 101.742858333,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "RUSB1D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GOSMU",
+          "lat": 2.586286111,
+          "lng": 102.091363889,
+          "airport": "WMKK",
+          "region": "WM",
+          "kind": 11,
+          "via": "RUSB1D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUSBU",
+          "lat": 2.022977778,
+          "lng": 102.511697222,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "RUSB1D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TOPOR",
+          "lat": 1.7367,
+          "lng": 102.8917,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "Y511",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ARAMA",
+          "lat": 1.615,
+          "lng": 103.12,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "A464",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LELIB",
+          "lat": 1.4581,
+          "lng": 103.4139,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "LELI3B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GUMPU",
+          "lat": 1.499861111,
+          "lng": 103.712,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "LELI3B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ALFA",
+          "lat": 1.509166667,
+          "lng": 103.828333333,
+          "airport": "ENRT",
+          "region": "WM",
+          "kind": 11,
+          "via": "LELI3B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIDUS",
+          "lat": 1.598333333,
+          "lng": 103.965277778,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "LELI3B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELBEX",
+          "lat": 1.530277778,
+          "lng": 104.053888889,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "R20R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELGAP",
+          "lat": 1.472222222,
+          "lng": 104.029444444,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "R20R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW20R",
+          "lat": 1.3761166666666667,
+          "lng": 103.98891388888889,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 100,
+          "via": "R20R",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [],
+      "distanceNm": 206
     }
   ]
 }
