@@ -33,6 +33,15 @@
       "kind": 1
     },
     {
+      "name": "WIII",
+      "title": "雅加达苏加诺－哈达",
+      "region": "WI",
+      "lat": -6.123611111,
+      "lng": 106.661111111,
+      "airport": "WIII",
+      "kind": 1
+    },
+    {
       "name": "WMKK",
       "title": "吉隆坡国际",
       "region": "WM",
@@ -1851,6 +1860,232 @@
       ],
       "notes": [],
       "distanceNm": 206
+    },
+    {
+      "id": "flight-006",
+      "date": "2026-10-11",
+      "dateSource": "用户确认：今天（2026-10-11）",
+      "fromCity": "新加坡",
+      "toCity": "雅加达",
+      "departureRunway": "02C",
+      "arrivalRunway": "24",
+      "sid": "ANIT7A",
+      "star": "BUNI2M",
+      "approach": "I24",
+      "approachTransition": "PRIOK",
+      "route": "WSSS/02C ANIT7A ANITO B470 BUNIK BUNI2M WIII/PRIOK.I24",
+      "enroute": [
+        "ANITO",
+        "B470",
+        "BUNIK"
+      ],
+      "color": "#ff936f",
+      "from": "WSSS",
+      "to": "WIII",
+      "points": [
+        {
+          "name": "RW02C",
+          "lat": 1.3287527777777777,
+          "lng": 103.98496111111112,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOXIB",
+          "lat": 1.4925,
+          "lng": 104.054166667,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EMRIX",
+          "lat": 1.435,
+          "lng": 104.177777778,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HOSBA",
+          "lat": 1.329972222,
+          "lng": 104.404861111,
+          "airport": "ENRT",
+          "region": "WS",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VANBU",
+          "lat": 1.111944444,
+          "lng": 104.461111111,
+          "airport": "WSSS",
+          "region": "WS",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VIRET",
+          "lat": 0.661111111,
+          "lng": 104.586388889,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GURES",
+          "lat": 0.470555556,
+          "lng": 104.643055556,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IKIRO",
+          "lat": 0.146944444,
+          "lng": 104.738888889,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANITO",
+          "lat": -0.283333333,
+          "lng": 104.866666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "ANIT7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PKP",
+          "lat": -2.167194444,
+          "lng": 106.142083333,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 3,
+          "via": "B470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BOSLO",
+          "lat": -3.625,
+          "lng": 106.391666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "B470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BUNIK",
+          "lat": -4.861666667,
+          "lng": 106.623333333,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "B470",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RAMAL",
+          "lat": -5.174722222,
+          "lng": 106.766388889,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "BUNI2M",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LUVAX",
+          "lat": -5.473333333,
+          "lng": 106.901666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "BUNI2M",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIBMI",
+          "lat": -5.718333333,
+          "lng": 106.898055556,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "BUNI2M",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PRIOK",
+          "lat": -5.960888889,
+          "lng": 106.892944444,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "BUNI2M",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DORTO",
+          "lat": -6.006611111,
+          "lng": 106.855694444,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "I24",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MILEA",
+          "lat": -6.043194444,
+          "lng": 106.821694444,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "I24",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FF24",
+          "lat": -6.06625,
+          "lng": 106.764,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "I24",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW24",
+          "lat": -6.103841666666666,
+          "lng": 106.66976666666667,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 100,
+          "via": "I24",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [],
+      "distanceNm": 521
     }
   ]
 }
