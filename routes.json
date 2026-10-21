@@ -1,8 +1,8 @@
 {
   "title": "飞行足迹",
   "cycle": "2610",
-  "updated": "2026-10-11",
-  "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610",
+  "updated": "2026-10-21",
+  "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610；新增航班计划数据来自用户提供的 SimBrief OFP",
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
     {
@@ -33,6 +33,15 @@
       "kind": 1
     },
     {
+      "name": "WADD",
+      "title": "巴厘岛伍拉·赖",
+      "region": "WA",
+      "lat": -8.7475,
+      "lng": 115.169166667,
+      "airport": "WADD",
+      "kind": 1
+    },
+    {
       "name": "WIII",
       "title": "雅加达苏加诺－哈达",
       "region": "WI",
@@ -57,6 +66,15 @@
       "lat": 1.359211111,
       "lng": 103.989325,
       "airport": "WSSS",
+      "kind": 1
+    },
+    {
+      "name": "YPDN",
+      "title": "达尔文国际",
+      "region": "YB",
+      "lat": -12.414722222,
+      "lng": 130.876666667,
+      "airport": "YPDN",
       "kind": 1
     },
     {
@@ -2086,6 +2104,619 @@
       ],
       "notes": [],
       "distanceNm": 521
+    },
+    {
+      "id": "flight-007",
+      "date": "2026-10-21",
+      "dateSource": "用户确认今天；SimBrief OFP 日期一致",
+      "fromCity": "雅加达",
+      "toCity": "巴厘岛",
+      "departureRunway": "25L",
+      "arrivalRunway": "27",
+      "sid": "CA2C",
+      "star": "MOVM2D",
+      "approach": null,
+      "approachTransition": null,
+      "route": "WIII/25L CA2C CA T3 MOVMO MOVM2D WADD/27",
+      "enroute": [
+        "CA",
+        "T3",
+        "MOVMO"
+      ],
+      "color": "#e1bcf5",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-21",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "00:26",
+        "costIndex": 39,
+        "passengers": 117,
+        "tripMinutes": 95,
+        "blockMinutes": 123,
+        "groundDistanceNm": 638,
+        "airDistanceNm": 630,
+        "alternate": "WADL / LOP",
+        "alternateName": "龙目岛",
+        "fuelLb": {
+          "block": 12328,
+          "taxi": 508,
+          "takeoff": 11820,
+          "trip": 7033,
+          "contingency": 1100,
+          "alternate": 1794,
+          "finalReserve": 1893,
+          "extra": 0
+        },
+        "weightsLb": {
+          "zeroFuel": 118974,
+          "takeoff": 130794,
+          "landing": 123761
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "00:55",
+            "local": "07:55",
+            "zone": "UTC+7"
+          },
+          {
+            "label": "起飞",
+            "utc": "01:15",
+            "local": "08:15",
+            "zone": "UTC+7"
+          },
+          {
+            "label": "落地",
+            "utc": "02:50",
+            "local": "10:50",
+            "zone": "UTC+8"
+          },
+          {
+            "label": "到位",
+            "utc": "02:58",
+            "local": "10:58",
+            "zone": "UTC+8"
+          }
+        ],
+        "route": "WIII/25L CA2C CA T3 MOVMO MOVMO2D WADD/27"
+      },
+      "from": "WIII",
+      "to": "WADD",
+      "points": [
+        {
+          "name": "RW25L",
+          "lat": -6.130302777777778,
+          "lng": 106.67439444444445,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BEMLO",
+          "lat": -6.198333333,
+          "lng": 106.503611111,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLPIK",
+          "lat": -6.291666667,
+          "lng": 106.541111111,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ATOTO",
+          "lat": -6.18,
+          "lng": 106.697777778,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HLM",
+          "lat": -6.271944444,
+          "lng": 106.886972222,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 3,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NUREN",
+          "lat": -6.342222222,
+          "lng": 107.021111111,
+          "airport": "WIII",
+          "region": "WI",
+          "kind": 11,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PW",
+          "lat": -6.566666667,
+          "lng": 107.45,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 2,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ASIPA",
+          "lat": -6.624166667,
+          "lng": 107.932222222,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CA",
+          "lat": -6.697980556,
+          "lng": 108.559758333,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 2,
+          "via": "CA2C",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANY",
+          "lat": -6.974694444,
+          "lng": 110.380111111,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 3,
+          "via": "T3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BA",
+          "lat": -6.992638889,
+          "lng": 111.418972222,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 2,
+          "via": "T3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOVMO",
+          "lat": -8.021388889,
+          "lng": 113.895555556,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "T3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIGIV",
+          "lat": -8.383055556,
+          "lng": 113.923611111,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ASIGI",
+          "lat": -8.741666667,
+          "lng": 114.116666667,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GODEV",
+          "lat": -8.915,
+          "lng": 114.421388889,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUPES",
+          "lat": -9.05,
+          "lng": 114.656111111,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GOSAN",
+          "lat": -9.053333333,
+          "lng": 114.983611111,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DAPRU",
+          "lat": -9.054166667,
+          "lng": 115.162222222,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BASIX",
+          "lat": -9.055277778,
+          "lng": 115.396944444,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BENOA",
+          "lat": -8.739166667,
+          "lng": 115.398333333,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "MOVM2D",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW27",
+          "lat": -8.747880555555554,
+          "lng": 115.181075,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 636
+    },
+    {
+      "id": "flight-008",
+      "date": "2026-10-21",
+      "dateSource": "用户确认今天；SimBrief OFP 日期一致",
+      "fromCity": "巴厘岛",
+      "toCity": "达尔文",
+      "departureRunway": "27",
+      "arrivalRunway": "29",
+      "sid": "GABI2B",
+      "star": "ANUP2X",
+      "approach": null,
+      "approachTransition": null,
+      "route": "WADD/27 GABI2B GABIT M766 IDOTO Y91 ANUPA ANUP2X YPDN/29",
+      "enroute": [
+        "GABIT",
+        "M766",
+        "IDOTO",
+        "Y91",
+        "ANUPA"
+      ],
+      "color": "#f3df7b",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-21",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "releaseUtc": "02:24",
+        "costIndex": 28,
+        "passengers": 158,
+        "tripMinutes": 147,
+        "blockMinutes": 175,
+        "groundDistanceNm": 1039,
+        "airDistanceNm": 1029,
+        "alternate": "YPTN / KTR",
+        "alternateName": "廷德尔",
+        "fuelLb": {
+          "block": 17650,
+          "taxi": 508,
+          "takeoff": 17142,
+          "trip": 11191,
+          "contingency": 1135,
+          "alternate": 2781,
+          "finalReserve": 2035,
+          "extra": 0
+        },
+        "weightsLb": {
+          "zeroFuel": 127832,
+          "takeoff": 144974,
+          "landing": 133783
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "02:50",
+            "local": "10:50",
+            "zone": "UTC+8"
+          },
+          {
+            "label": "起飞",
+            "utc": "03:10",
+            "local": "11:10",
+            "zone": "UTC+8"
+          },
+          {
+            "label": "落地",
+            "utc": "05:37",
+            "local": "15:07",
+            "zone": "UTC+9:30"
+          },
+          {
+            "label": "到位",
+            "utc": "05:45",
+            "local": "15:15",
+            "zone": "UTC+9:30"
+          }
+        ],
+        "etopsMinutes": 75,
+        "enrouteAlternate": "WAAA",
+        "route": "WADD/27 GABIT2B GABIT M766 IDOTO Y91 ANUPA ANUPA2X YPDN/29"
+      },
+      "from": "WADD",
+      "to": "YPDN",
+      "points": [
+        {
+          "name": "RW27",
+          "lat": -8.747880555555554,
+          "lng": 115.181075,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ASOTO",
+          "lat": -8.748611111,
+          "lng": 114.98,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SULUD",
+          "lat": -8.894166667,
+          "lng": 114.979444444,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUNTU",
+          "lat": -8.895833333,
+          "lng": 115.283611111,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAGIK",
+          "lat": -8.897777778,
+          "lng": 115.810277778,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANGSA",
+          "lat": -9.106111111,
+          "lng": 117.066666667,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GABIT",
+          "lat": -9.428055556,
+          "lng": 117.596666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "GABI2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SOTRA",
+          "lat": -10.01,
+          "lng": 120.0,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "M766",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SATNA",
+          "lat": -11.07,
+          "lng": 124.57,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "M766",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IDOTO",
+          "lat": -11.518322222,
+          "lng": 126.646780556,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "M766",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PAGMI",
+          "lat": -11.243055556,
+          "lng": 128.655833333,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANUPA",
+          "lat": -11.514333333,
+          "lng": 129.906861111,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUDAG",
+          "lat": -11.899472222,
+          "lng": 130.242694444,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IDLUD",
+          "lat": -12.260694444,
+          "lng": 130.684805556,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EPDAM",
+          "lat": -12.30025,
+          "lng": 130.803138889,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "WOKKI",
+          "lat": -12.330166667,
+          "lng": 130.892722222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DAKTI",
+          "lat": -12.416305556,
+          "lng": 131.151277778,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NEILO",
+          "lat": -12.4965,
+          "lng": 131.1245,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LAPAR",
+          "lat": -12.468944444,
+          "lng": 131.043111111,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "ANUP2X",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW29",
+          "lat": -12.419233333333333,
+          "lng": 130.89443888888889,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 1038
     }
   ]
 }

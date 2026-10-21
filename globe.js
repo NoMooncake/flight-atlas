@@ -3,6 +3,7 @@ const $ = id => document.getElementById(id);
 const C = window.Cesium;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let viewer, data, selected = null;
+let planWeightUnit = 'kg';
 let cameraMoving=false, settleTimer, lastHudUpdate=0;
 const restingScale=Math.min(devicePixelRatio,1.25);
 const routeEntities = [], airportEntities = [], waypointEntities = [];
@@ -26,7 +27,41 @@ function renderList() {
     b.type = 'button'; b.className = 'flight'; b.dataset.id = f.id;
     b.style.setProperty('--flight-color', f.color); b.setAttribute('aria-pressed','false');
     b.innerHTML = `<span class="number">${String(i+1).padStart(2,'0')}</span><span><span class="city-pair">${esc(f.fromCity)}<span class="arrow">→</span>${esc(f.toCity)}</span><span class="route-airports" style="display:block">${esc(f.from)} — ${esc(f.to)}</span><span class="metadata"><span>${esc(f.date ? f.date.replaceAll('-','.') : (f.dateLabel || '日期未记录'))}</span><span>约 ${f.distanceNm} 海里</span></span></span><span class="chevron">›</span>`;
+    if (f.aircraft) {
+      const badge = document.createElement('span');
+      badge.className = 'aircraft-badge'; badge.textContent = `${f.aircraft} · SimBrief`;
+      b.querySelector('.route-airports').append(' ', badge);
+    }
     b.onclick = () => selectFlight(f.id); $('flights').append(b);
+  });
+}
+function renderFlightPlan(f) {
+  const panel = $('flight-plan'), plan = f?.simbrief;
+  panel.hidden = !plan;
+  $('flight-plan-content').replaceChildren();
+  if (!plan) return;
+  const duration = minutes => `${Math.floor(minutes / 60)} 小时 ${String(minutes % 60).padStart(2,'0')} 分`;
+  const weight = pounds => `${Math.round(planWeightUnit === 'kg' ? pounds * 0.45359237 : pounds).toLocaleString('zh-CN')} ${planWeightUnit}`;
+  const rows = items => `<dl class="plan-rows">${items.map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`;
+  $('flight-plan-content').innerHTML = `
+    <div class="plan-header"><strong>${esc(plan.aircraft)} <span>${esc(plan.icaoType)}</span></strong><span>${esc(plan.flightNumber)}</span></div>
+    <p class="plan-meta">${esc(plan.variant)} · ${esc(plan.engine)}<br>${esc(plan.registration)} · OFP ${esc(plan.ofpNumber)} · ${esc(plan.planDate)}</p>
+    <p class="plan-notice">以下为 SimBrief 预计值，非实飞时间或实际耗油。</p>
+    <div class="plan-highlights"><div><span>预计空中时间</span><strong>${duration(plan.tripMinutes)}</strong></div><div><span>预计轮挡时间</span><strong>${duration(plan.blockMinutes)}</strong></div></div>
+    ${rows([['巡航高度',`FL${plan.cruiseFlightLevel} · ${(plan.cruiseFlightLevel*100).toLocaleString('zh-CN')} ft`],['成本指数',`CI ${plan.costIndex}`],['计划乘客',`${plan.passengers} 人`],['计划地面航程',`${plan.groundDistanceNm.toLocaleString('zh-CN')} 海里`],['备降机场',`${plan.alternate} · ${plan.alternateName}`]])}
+    <h3>预计时刻</h3><p class="plan-caption">${esc(plan.planDate)} · 当地时间 / UTC</p>
+    <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z</dd></div>`).join('')}</dl>
+    <div class="plan-section-heading"><h3>燃油与重量</h3><div class="plan-units" role="group" aria-label="燃油与重量单位"><button type="button" data-plan-unit="kg" aria-pressed="${planWeightUnit==='kg'}">kg</button><button type="button" data-plan-unit="lb" aria-pressed="${planWeightUnit==='lb'}">lb</button></div></div>
+    <p class="plan-caption">原始单位：lb。公斤数按磅换算并取整。</p>
+    ${rows([['计划轮挡油量',weight(plan.fuelLb.block)],['滑行油量',weight(plan.fuelLb.taxi)],['起飞油量',weight(plan.fuelLb.takeoff)],['航程耗油',weight(plan.fuelLb.trip)],['应急油量 · 15 分钟',weight(plan.fuelLb.contingency)],['备降油量',weight(plan.fuelLb.alternate)],['最后储备 · 30 分钟',weight(plan.fuelLb.finalReserve)],['额外油量',weight(plan.fuelLb.extra)]])}
+    <h3>预计重量</h3>${rows([['零燃油重量',weight(plan.weightsLb.zeroFuel)],['起飞重量',weight(plan.weightsLb.takeoff)],['落地重量',weight(plan.weightsLb.landing)]])}
+    ${plan.etopsMinutes ? `<h3>ETOPS 计划</h3>${rows([['规则时间',`${plan.etopsMinutes} 分钟`],['航路备降机场',plan.enrouteAlternate]])}` : ''}
+    <details class="plan-source"><summary>计划来源与原始航路</summary><p>SimBrief OFP ${esc(plan.ofpNumber)} · ${esc(plan.releaseUtc)} UTC 签发<br>摘要来自计划书第 ${esc(plan.sourcePages.join('、'))} 页。</p><p class="plan-route">${esc(plan.route)}</p><p>程序名称保留 OFP 写法；地图按你提供的航路和 AIRAC 2610 航点重建，距离与 OFP 可能略有差异。</p></details>`;
+  panel.querySelectorAll('[data-plan-unit]').forEach(button => button.onclick = () => {
+    const sourceOpen = panel.querySelector('.plan-source').open;
+    planWeightUnit = button.dataset.planUnit; renderFlightPlan(f);
+    panel.querySelector('.plan-source').open = sourceOpen;
+    panel.querySelector(`[data-plan-unit="${planWeightUnit}"]`).focus({preventScroll:true});
   });
 }
 function selectFlight(id) {
@@ -37,6 +72,8 @@ function selectFlight(id) {
     b.setAttribute('aria-pressed', String(b.dataset.id === id));
   });
   const f = data.flights.find(f => f.id === id);
+  $('flight-plan').open = false;
+  renderFlightPlan(f);
   $('route-details').hidden = !f; $('route-details').open = false;
   $('detail-caption').textContent = f ? `航段 ${String(data.flights.indexOf(f)+1).padStart(2,'0')}` : '旅程进度';
   $('detail-count').textContent = f ? `${f.points.length} 个航点` : `${String(data.flights.length).padStart(2,'0')} / 已抵达`;

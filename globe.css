@@ -1,4 +1,21 @@
 .earth-panel,#map{background:#07111b;color:#eaf0f3}
+.aircraft-badge{display:inline-block;margin-left:5px;padding:1px 5px;border:1px solid #83acbb40;border-radius:4px;color:#b8d4df;font-size:8px;letter-spacing:0}
+#flight-plan{border:1px solid #8daebb35;border-radius:8px;background:#14232e;margin:18px 0;padding:12px}
+#flight-plan>summary{color:#e5d7b9;font-size:12px}
+.plan-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;color:#edf4f8}
+.plan-header strong{font-size:17px}.plan-header strong span{font-size:9px;color:#a8c6d6;margin-left:5px}.plan-header>span{font:12px Consolas,monospace;color:#f5d09b}
+.plan-meta,.plan-caption{font-size:10px;color:#a3b9c7;line-height:1.7;margin:7px 0}
+.plan-notice{color:#d2bc94;background:#24313b;padding:8px;border-radius:4px;font-size:10px;line-height:1.7}
+.plan-highlights{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.plan-highlights span,.plan-highlights strong{display:block}.plan-highlights span{font-size:10px;color:#a3b9c7}.plan-highlights strong{font-size:14px;font-weight:500;color:#fff0d3;margin-top:5px}
+.plan-rows,.plan-times{margin:10px 0}.plan-rows>div{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;padding:7px 0;border-bottom:1px solid #8daebb18}
+.plan-rows dt,.plan-times dt{color:#a3b9c7}.plan-rows dd{margin:0;text-align:right;color:#e0ebf1;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+#flight-plan h3{font-size:11px;color:#e4cfaa;font-weight:500;margin:20px 0 6px}
+.plan-times>div{display:grid;grid-template-columns:40px 1fr 1fr;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid #8daebb18}
+.plan-times dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}.plan-times strong{font-size:13px;font-weight:500}.plan-times small{display:block;color:#9aafbd;font-size:9px}.plan-times dd:last-child{color:#a3b9c7;font-size:10px}
+.plan-section-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:20px}#flight-plan .plan-section-heading h3{margin:0}
+.plan-units{display:flex;gap:2px;border:1px solid #8daebb40;border-radius:5px;padding:2px}.plan-units button{border:0;border-radius:3px;background:none;color:#a3b9c7;font-size:11px;padding:3px 9px}.plan-units button[aria-pressed=true]{background:#395363;color:white}
+.plan-source{border-top:1px solid #8daebb35;padding-top:12px}.plan-source p{font-size:10px;color:#a3b9c7;line-height:1.8}.plan-route{font-family:Consolas,monospace;overflow-wrap:anywhere}
 .cesium-viewer,.cesium-viewer-cesiumWidgetContainer,.cesium-widget,.cesium-widget canvas{width:100%;height:100%}
 .cesium-widget canvas{display:block;outline:none}
 .map-heading>.eyebrow,.map-actions,.map-zoom button,.map-bottom>div,.waypoint-toggle,.map-legend{background:#10212ce8;color:#dce7ef;border-color:#91b5ca30;box-shadow:0 2px 14px #0002;backdrop-filter:blur(10px)}
