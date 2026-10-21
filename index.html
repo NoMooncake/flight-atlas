@@ -5,9 +5,9 @@
   <meta name="theme-color" content="#0b131b"><meta name="description" content="把每一次模拟飞行，连成一张属于自己的世界地图。">
   <title>飞行足迹 · 我的世界航迹</title>
   <link rel="stylesheet" href="./assets/cesium/Widgets/widgets.css"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./map.css?v=20261011-globe">
-  <link rel="stylesheet" href="./globe.css?v=20261021-simbrief">
+  <link rel="stylesheet" href="./globe.css?v=20261021-cairns">
   <script>window.CESIUM_BASE_URL="./assets/cesium/";</script>
-  <script src="./assets/cesium/Cesium.js" defer></script><script src="./globe.js?v=20261021-simbrief" defer></script>
+  <script src="./assets/cesium/Cesium.js" defer></script><script src="./globe.js?v=20261021-cairns" defer></script>
 </head>
 <body>
 <header class="topbar">
@@ -17,11 +17,11 @@
 </header>
 <main>
   <aside class="journal" tabindex="0" aria-label="航程记录，可独立滚动">
-    <div class="intro"><p class="eyebrow">我的世界航迹 / 001—009</p><h1>把飞过的地方，<br>连成一个世界。</h1><p class="subtitle">从杭州出发，旅程正在继续。</p></div>
-    <div class="stats"><div><strong id="flight-count">9</strong><span>已完成航段</span></div><div><strong id="airport-count">10</strong><span>到访机场</span></div><div><strong id="total-distance">5,514</strong><span>航路海里 · 约</span></div></div>
+    <div class="intro"><p class="eyebrow">我的世界航迹 / 001—010</p><h1>把飞过的地方，<br>连成一个世界。</h1><p class="subtitle">从杭州出发，旅程正在继续。</p></div>
+    <div class="stats"><div><strong id="flight-count">10</strong><span>已完成航段</span></div><div><strong id="airport-count">11</strong><span>到访机场</span></div><div><strong id="total-distance">6,461</strong><span>航路海里 · 约</span></div></div>
     <div class="list-heading"><h2>我的航程</h2><span>按飞行顺序</span></div>
     <nav id="flights" aria-label="已完成航段"></nav>
-    <section class="detail" aria-live="polite"><div class="detail-top"><span class="eyebrow" id="detail-caption">旅程进度</span><span id="detail-count">09 / 已抵达</span></div><h2 id="detail-title">此刻，达尔文。</h2><p id="detail-description">杭州 → 上海 → 香港 → 胡志明市 → 曼谷 → 吉隆坡 → 新加坡 → 雅加达 → 巴厘岛 → 达尔文</p><details id="flight-plan" hidden><summary>查看 SimBrief 飞行计划</summary><div id="flight-plan-content"></div></details><details id="route-details" hidden><summary>查看完整航路与航点</summary><p id="raw-route"></p><p id="waypoint-chain"></p></details><p id="route-notes" class="route-notes"></p></section>
+    <section class="detail" aria-live="polite"><div class="detail-top"><span class="eyebrow" id="detail-caption">旅程进度</span><span id="detail-count">10 / 已抵达</span></div><h2 id="detail-title">此刻，凯恩斯。</h2><p id="detail-description">杭州 → 上海 → 香港 → 胡志明市 → 曼谷 → 吉隆坡 → 新加坡 → 雅加达 → 巴厘岛 → 达尔文 → 凯恩斯</p><details id="flight-plan" hidden><summary>查看 SimBrief 飞行计划</summary><div id="flight-plan-content"></div></details><details id="route-details" hidden><summary>查看完整航路与航点</summary><p id="raw-route"></p><p id="waypoint-chain"></p></details><p id="route-notes" class="route-notes"></p></section>
     <footer class="journal-footer"><span class="status-dot"></span>下一段旅程，待续。<p>航路按 AIRAC 2610 航点重建，非实飞轨迹。<br>虚线表示引导或非定点航段的示意连接。</p></footer>
   </aside>
   <section class="earth-panel" aria-label="交互式地球航路地图">

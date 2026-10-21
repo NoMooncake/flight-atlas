@@ -69,6 +69,15 @@
       "kind": 1
     },
     {
+      "name": "YBCS",
+      "title": "凯恩斯国际",
+      "region": "YB",
+      "lat": -16.885833333,
+      "lng": 145.755277778,
+      "airport": "YBCS",
+      "kind": 1
+    },
+    {
       "name": "YPDN",
       "title": "达尔文国际",
       "region": "YB",
@@ -2717,6 +2726,281 @@
         "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
       ],
       "distanceNm": 1038
+    },
+    {
+      "id": "flight-009",
+      "date": "2026-10-21",
+      "dateSource": "用户确认今天；SimBrief OFP UTC 日期一致",
+      "fromCity": "达尔文",
+      "toCity": "凯恩斯",
+      "departureRunway": "29",
+      "arrivalRunway": "15",
+      "sid": "RUPEG3",
+      "star": "CODI2S",
+      "approach": null,
+      "approachTransition": null,
+      "route": "YPDN/29 RUPEG3 RUPEG DCT SOCAR J61 PUNIT CODI2S YBCS/15",
+      "enroute": [
+        "RUPEG",
+        "DCT",
+        "SOCAR",
+        "J61",
+        "PUNIT"
+      ],
+      "color": "#74d6bb",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 2,
+        "planDate": "2026-10-21",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "18:16",
+        "costIndex": 5,
+        "passengers": 132,
+        "tripMinutes": 129,
+        "blockMinutes": 157,
+        "groundDistanceNm": 947,
+        "airDistanceNm": 854,
+        "alternate": "YBTL / TSV",
+        "alternateName": "汤斯维尔",
+        "fuelLb": {
+          "block": 15823,
+          "taxi": 508,
+          "takeoff": 15315,
+          "trip": 9216,
+          "contingency": 1072,
+          "alternate": 3112,
+          "finalReserve": 1915,
+          "extra": 0
+        },
+        "weightsLb": {
+          "zeroFuel": 122215,
+          "takeoff": 137530,
+          "landing": 128314
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "18:10",
+            "local": "03:40",
+            "zone": "UTC+9:30",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "起飞",
+            "utc": "18:30",
+            "local": "04:00",
+            "zone": "UTC+9:30",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "落地",
+            "utc": "20:39",
+            "local": "06:39",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "到位",
+            "utc": "20:47",
+            "local": "06:47",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          }
+        ],
+        "route": "YPDN/29 RUPEG3 RUPEG DCT SOCAR J61 PUNIT CODIE2S YBCS/15"
+      },
+      "from": "YPDN",
+      "to": "YBCS",
+      "points": [
+        {
+          "name": "RW29",
+          "lat": -12.419233333333333,
+          "lng": 130.89443888888889,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NASUX",
+          "lat": -12.358,
+          "lng": 130.71275,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UBGUX",
+          "lat": -12.227027778,
+          "lng": 130.721083333,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LEMUX",
+          "lat": -12.207,
+          "lng": 130.787722222,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BAXIB",
+          "lat": -12.3375,
+          "lng": 131.177583333,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AKNUD",
+          "lat": -12.407083333,
+          "lng": 131.340611111,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SNICK",
+          "lat": -12.578333333,
+          "lng": 131.743333333,
+          "airport": "YPDN",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUPEG",
+          "lat": -12.715833333,
+          "lng": 132.229444444,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "RUPEG3",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SOCAR",
+          "lat": -13.221472222,
+          "lng": 133.332466667,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "DCT",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DUMAV",
+          "lat": -13.940830556,
+          "lng": 135.595722222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "J61",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GUGUK",
+          "lat": -14.941261111,
+          "lng": 138.876675,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "J61",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GULOP",
+          "lat": -15.820111111,
+          "lng": 141.922888889,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "J61",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANDEE",
+          "lat": -16.182861111,
+          "lng": 143.235472222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "J61",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PUNIT",
+          "lat": -16.630944444,
+          "lng": 144.906027778,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "J61",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CODIE",
+          "lat": -16.545,
+          "lng": 145.598333333,
+          "airport": "YBCS",
+          "region": "YB",
+          "kind": 11,
+          "via": "CODI2S",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GUNRO",
+          "lat": -16.59725,
+          "lng": 145.622361111,
+          "airport": "YBCS",
+          "region": "YB",
+          "kind": 11,
+          "via": "CODI2S",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW15",
+          "lat": -16.865816666666667,
+          "lng": 145.74356944444443,
+          "airport": "YBCS",
+          "region": "YB",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 947
     }
   ]
 }

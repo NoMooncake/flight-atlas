@@ -49,8 +49,8 @@ function renderFlightPlan(f) {
     <p class="plan-notice">以下为 SimBrief 预计值，非实飞时间或实际耗油。</p>
     <div class="plan-highlights"><div><span>预计空中时间</span><strong>${duration(plan.tripMinutes)}</strong></div><div><span>预计轮挡时间</span><strong>${duration(plan.blockMinutes)}</strong></div></div>
     ${rows([['巡航高度',`FL${plan.cruiseFlightLevel} · ${(plan.cruiseFlightLevel*100).toLocaleString('zh-CN')} ft`],['成本指数',`CI ${plan.costIndex}`],['计划乘客',`${plan.passengers} 人`],['计划地面航程',`${plan.groundDistanceNm.toLocaleString('zh-CN')} 海里`],['备降机场',`${plan.alternate} · ${plan.alternateName}`]])}
-    <h3>预计时刻</h3><p class="plan-caption">${esc(plan.planDate)} · 当地时间 / UTC</p>
-    <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z</dd></div>`).join('')}</dl>
+    <h3>预计时刻</h3><p class="plan-caption">UTC 日期 ${esc(plan.planDate)} · 当地时间 / UTC</p>
+    <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${t.localDate && t.localDate !== plan.planDate ? `${esc(t.localDate.slice(5))} · ` : ''}${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z</dd></div>`).join('')}</dl>
     <div class="plan-section-heading"><h3>燃油与重量</h3><div class="plan-units" role="group" aria-label="燃油与重量单位"><button type="button" data-plan-unit="kg" aria-pressed="${planWeightUnit==='kg'}">kg</button><button type="button" data-plan-unit="lb" aria-pressed="${planWeightUnit==='lb'}">lb</button></div></div>
     <p class="plan-caption">原始单位：lb。公斤数按磅换算并取整。</p>
     ${rows([['计划轮挡油量',weight(plan.fuelLb.block)],['滑行油量',weight(plan.fuelLb.taxi)],['起飞油量',weight(plan.fuelLb.takeoff)],['航程耗油',weight(plan.fuelLb.trip)],['应急油量 · 15 分钟',weight(plan.fuelLb.contingency)],['备降油量',weight(plan.fuelLb.alternate)],['最后储备 · 30 分钟',weight(plan.fuelLb.finalReserve)],['额外油量',weight(plan.fuelLb.extra)]])}
