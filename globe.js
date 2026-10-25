@@ -41,7 +41,10 @@ function renderFlightPlan(f) {
   $('flight-plan-content').replaceChildren();
   if (!plan) return;
   const duration = minutes => `${Math.floor(minutes / 60)} 小时 ${String(minutes % 60).padStart(2,'0')} 分`;
-  const weight = pounds => `${Math.round(planWeightUnit === 'kg' ? pounds * 0.45359237 : pounds).toLocaleString('zh-CN')} ${planWeightUnit}`;
+  const sourceUnit = plan.weightUnit === 'kg' ? 'kg' : 'lb';
+  const fuel = sourceUnit === 'kg' ? plan.fuelKg : plan.fuelLb;
+  const weights = sourceUnit === 'kg' ? plan.weightsKg : plan.weightsLb;
+  const weight = value => `${Math.round(sourceUnit === planWeightUnit ? value : sourceUnit === 'lb' ? value * 0.45359237 : value / 0.45359237).toLocaleString('zh-CN')} ${planWeightUnit}`;
   const rows = items => `<dl class="plan-rows">${items.map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`;
   $('flight-plan-content').innerHTML = `
     <div class="plan-header"><strong>${esc(plan.aircraft)} <span>${esc(plan.icaoType)}</span></strong><span>${esc(plan.flightNumber)}</span></div>
@@ -52,11 +55,11 @@ function renderFlightPlan(f) {
     <h3>预计时刻</h3><p class="plan-caption">UTC 日期 ${esc(plan.planDate)} · 当地时间 / UTC</p>
     <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${t.localDate && t.localDate !== plan.planDate ? `${esc(t.localDate.slice(5))} · ` : ''}${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z</dd></div>`).join('')}</dl>
     <div class="plan-section-heading"><h3>燃油与重量</h3><div class="plan-units" role="group" aria-label="燃油与重量单位"><button type="button" data-plan-unit="kg" aria-pressed="${planWeightUnit==='kg'}">kg</button><button type="button" data-plan-unit="lb" aria-pressed="${planWeightUnit==='lb'}">lb</button></div></div>
-    <p class="plan-caption">原始单位：lb。公斤数按磅换算并取整。</p>
-    ${rows([['计划轮挡油量',weight(plan.fuelLb.block)],['滑行油量',weight(plan.fuelLb.taxi)],['起飞油量',weight(plan.fuelLb.takeoff)],['航程耗油',weight(plan.fuelLb.trip)],['应急油量 · 15 分钟',weight(plan.fuelLb.contingency)],['备降油量',weight(plan.fuelLb.alternate)],['最后储备 · 30 分钟',weight(plan.fuelLb.finalReserve)],['额外油量',weight(plan.fuelLb.extra)]])}
-    <h3>预计重量</h3>${rows([['零燃油重量',weight(plan.weightsLb.zeroFuel)],['起飞重量',weight(plan.weightsLb.takeoff)],['落地重量',weight(plan.weightsLb.landing)]])}
+    <p class="plan-caption">原始单位：${sourceUnit}。切换单位时换算并取整。</p>
+    ${rows([['计划轮挡油量',weight(fuel.block)],['滑行油量',weight(fuel.taxi)],['起飞油量',weight(fuel.takeoff)],['航程耗油',weight(fuel.trip)],['应急油量 · 15 分钟',weight(fuel.contingency)],['备降油量',weight(fuel.alternate)],['最后储备 · 30 分钟',weight(fuel.finalReserve)],...(fuel.etops !== undefined ? [['ETOPS / ETP 额外燃油',weight(fuel.etops)]] : []),['额外油量',weight(fuel.extra)]])}
+    <h3>预计重量</h3>${rows([['零燃油重量',weight(weights.zeroFuel)],['起飞重量',weight(weights.takeoff)],['落地重量',weight(weights.landing)]])}
     ${plan.etopsMinutes ? `<h3>ETOPS 计划</h3>${rows([['规则时间',`${plan.etopsMinutes} 分钟`],['航路备降机场',plan.enrouteAlternate]])}` : ''}
-    <details class="plan-source"><summary>计划来源与原始航路</summary><p>SimBrief OFP ${esc(plan.ofpNumber)} · ${esc(plan.releaseUtc)} UTC 签发<br>摘要来自计划书第 ${esc(plan.sourcePages.join('、'))} 页。</p><p class="plan-route">${esc(plan.route)}</p><p>程序名称保留 OFP 写法；地图按你提供的航路和 AIRAC 2610 航点重建，距离与 OFP 可能略有差异。</p></details>`;
+    <details class="plan-source"><summary>计划来源与原始航路</summary><p>SimBrief OFP ${esc(plan.ofpNumber)} · ${esc(plan.releaseDate || plan.planDate)} ${esc(plan.releaseUtc)} UTC 签发<br>摘要来自计划书第 ${esc(plan.sourcePages.join('、'))} 页。</p><p class="plan-route">${esc(plan.route)}</p><p>程序名称保留 OFP 写法；地图按你提供的航路和 AIRAC 2610 航点重建，距离与 OFP 可能略有差异。</p></details>`;
   panel.querySelectorAll('[data-plan-unit]').forEach(button => button.onclick = () => {
     const sourceOpen = panel.querySelector('.plan-source').open;
     planWeightUnit = button.dataset.planUnit; renderFlightPlan(f);

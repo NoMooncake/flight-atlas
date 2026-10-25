@@ -1,10 +1,19 @@
 {
   "title": "飞行足迹",
   "cycle": "2610",
-  "updated": "2026-10-21",
+  "updated": "2026-10-25",
   "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610；新增航班计划数据来自用户提供的 SimBrief OFP",
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
+    {
+      "name": "NZCH",
+      "title": "基督城国际",
+      "region": "NZ",
+      "lat": -43.489444444,
+      "lng": 172.534444444,
+      "airport": "NZCH",
+      "kind": 1
+    },
     {
       "name": "VHHH",
       "title": "香港国际",
@@ -69,6 +78,15 @@
       "kind": 1
     },
     {
+      "name": "YBBN",
+      "title": "布里斯班国际",
+      "region": "YB",
+      "lat": -27.384166667,
+      "lng": 153.1175,
+      "airport": "YBBN",
+      "kind": 1
+    },
+    {
       "name": "YBCS",
       "title": "凯恩斯国际",
       "region": "YB",
@@ -78,12 +96,30 @@
       "kind": 1
     },
     {
+      "name": "YMML",
+      "title": "墨尔本国际",
+      "region": "YM",
+      "lat": -37.673333333,
+      "lng": 144.843333333,
+      "airport": "YMML",
+      "kind": 1
+    },
+    {
       "name": "YPDN",
       "title": "达尔文国际",
       "region": "YB",
       "lat": -12.414722222,
       "lng": 130.876666667,
       "airport": "YPDN",
+      "kind": 1
+    },
+    {
+      "name": "YSSY",
+      "title": "悉尼金斯福德·史密斯",
+      "region": "YM",
+      "lat": -33.946,
+      "lng": 151.177111111,
+      "airport": "YSSY",
       "kind": 1
     },
     {
@@ -3001,6 +3037,1209 @@
         "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
       ],
       "distanceNm": 947
+    },
+    {
+      "id": "flight-010",
+      "date": "2026-10-22",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "凯恩斯",
+      "toCity": "布里斯班",
+      "departureRunway": "15",
+      "arrivalRunway": "01R",
+      "sid": "AKROM1",
+      "star": "SMOK2A",
+      "approach": null,
+      "approachTransition": null,
+      "route": "YBCS/15 AKROM1 AKROM Y177 SMOKA SMOKA2A YBBN/01R",
+      "enroute": [
+        "AKROM",
+        "Y177",
+        "SMOKA"
+      ],
+      "color": "#f0a47e",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 2,
+        "planDate": "2026-10-22",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "23:53",
+        "costIndex": 8,
+        "passengers": 115,
+        "tripMinutes": 112,
+        "blockMinutes": 140,
+        "groundDistanceNm": 781,
+        "airDistanceNm": 733,
+        "alternate": "YSSY / SYD",
+        "alternateName": "悉尼",
+        "route": "YBCS/15 AKROM1 AKROM Y177 SMOKA SMOKA2A YBBN/01R",
+        "fuelLb": {
+          "block": 16635,
+          "taxi": 508,
+          "takeoff": 16127,
+          "trip": 8023,
+          "contingency": 1066,
+          "alternate": 5186,
+          "finalReserve": 1852,
+          "extra": 0
+        },
+        "weightsLb": {
+          "zeroFuel": 118542,
+          "takeoff": 134669,
+          "landing": 126646
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "00:25",
+            "local": "10:25",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "起飞",
+            "utc": "00:45",
+            "local": "10:45",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "落地",
+            "utc": "02:37",
+            "local": "12:37",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          },
+          {
+            "label": "到位",
+            "utc": "02:45",
+            "local": "12:45",
+            "zone": "UTC+10",
+            "localDate": "2026-10-22"
+          }
+        ],
+        "releaseDate": "2026-10-21"
+      },
+      "from": "YBCS",
+      "to": "YBBN",
+      "points": [
+        {
+          "name": "RW15",
+          "lat": -16.865816666666667,
+          "lng": 145.74356944444443,
+          "airport": "YBCS",
+          "region": "YB",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CS",
+          "lat": -16.850027778,
+          "lng": 145.743888889,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 3,
+          "via": "AKROM1",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "AKROM",
+          "lat": -18.353805556,
+          "lng": 146.800277778,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "AKROM1",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "WALTA",
+          "lat": -19.6906,
+          "lng": 147.590647222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "COCKA",
+          "lat": -23.041847222,
+          "lng": 149.641522222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUROX",
+          "lat": -24.494133333,
+          "lng": 150.569880556,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BESBO",
+          "lat": -25.744472222,
+          "lng": 151.491527778,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LAMUG",
+          "lat": -26.633888889,
+          "lng": 152.382222222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SMOKA",
+          "lat": -26.87575,
+          "lng": 152.632166667,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y177",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OTGAT",
+          "lat": -26.9675,
+          "lng": 152.726944444,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GARTH",
+          "lat": -26.998222222,
+          "lng": 152.758205556,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ESNAV",
+          "lat": -27.136944444,
+          "lng": 152.777222222,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DAPTU",
+          "lat": -27.226666667,
+          "lng": 152.804722222,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUKNO",
+          "lat": -27.316388889,
+          "lng": 152.831666667,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BETNI",
+          "lat": -27.516361111,
+          "lng": 152.917388889,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MATBO",
+          "lat": -27.576972222,
+          "lng": 152.943888889,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GLENN",
+          "lat": -27.575,
+          "lng": 153.02,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "SMOK2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW01R",
+          "lat": -27.402797222222222,
+          "lng": 153.11821944444446,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 778
+    },
+    {
+      "id": "flight-011",
+      "date": "2026-10-24",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "布里斯班",
+      "toCity": "悉尼",
+      "departureRunway": "01R",
+      "arrivalRunway": "34L",
+      "sid": "SANEG2",
+      "star": "MEPIL4",
+      "approach": null,
+      "approachTransition": null,
+      "route": "YBBN/01R SANEG2 SANEG H91 SANAD MEPIL4 YSSY/34L",
+      "enroute": [
+        "SANEG",
+        "H91",
+        "SANAD"
+      ],
+      "color": "#97b1f9",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-24",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 340,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "19:03",
+        "costIndex": 30,
+        "passengers": 148,
+        "tripMinutes": 77,
+        "blockMinutes": 105,
+        "groundDistanceNm": 466,
+        "airDistanceNm": 462,
+        "alternate": "YSCB / CBR",
+        "alternateName": "堪培拉",
+        "route": "YBBN/01R SANEG2 SANEG H91 SANAD MEPIL4 YSSY/34L",
+        "fuelLb": {
+          "block": 12519,
+          "taxi": 508,
+          "takeoff": 12011,
+          "trip": 6043,
+          "contingency": 1169,
+          "alternate": 2858,
+          "finalReserve": 1941,
+          "extra": 0
+        },
+        "weightsLb": {
+          "zeroFuel": 125672,
+          "takeoff": 137683,
+          "landing": 131640
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "19:35",
+            "local": "05:35",
+            "zone": "UTC+10",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "起飞",
+            "utc": "19:55",
+            "local": "05:55",
+            "zone": "UTC+10",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "落地",
+            "utc": "21:12",
+            "local": "08:12",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "到位",
+            "utc": "21:20",
+            "local": "08:20",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          }
+        ]
+      },
+      "from": "YBBN",
+      "to": "YSSY",
+      "starTransitions": [
+        "SANAD",
+        "ALL"
+      ],
+      "points": [
+        {
+          "name": "RW01R",
+          "lat": -27.402797222222222,
+          "lng": 153.11821944444446,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BEERN",
+          "lat": -27.287083333,
+          "lng": 153.235111111,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "OLMAL",
+          "lat": -27.282333333,
+          "lng": 153.340361111,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KAKEB",
+          "lat": -27.279527778,
+          "lng": 153.4015,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OBDES",
+          "lat": -27.38,
+          "lng": 153.410277778,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UPRIG",
+          "lat": -27.477027778,
+          "lng": 153.379222222,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "METEP",
+          "lat": -27.56225,
+          "lng": 153.298611111,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BEKAG",
+          "lat": -27.615833333,
+          "lng": 153.178527778,
+          "airport": "YBBN",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SANEG",
+          "lat": -27.817833333,
+          "lng": 153.043972222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "SANEG2",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HUUGO",
+          "lat": -28.089805556,
+          "lng": 152.924777778,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "H91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "APAGI",
+          "lat": -28.848888889,
+          "lng": 152.585305556,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "H91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CLIFF",
+          "lat": -29.700944444,
+          "lng": 152.074777778,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "H91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ADMAR",
+          "lat": -30.322777778,
+          "lng": 151.911861111,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "H91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SANAD",
+          "lat": -31.386388889,
+          "lng": 151.412388889,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "H91",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLTIN",
+          "lat": -32.552138889,
+          "lng": 151.2575,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "MEPIL4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YAKKA",
+          "lat": -33.192333333,
+          "lng": 151.222916667,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "MEPIL4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MEPIL",
+          "lat": -33.402722222,
+          "lng": 151.211416667,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "MEPIL4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LANOL",
+          "lat": -33.609305556,
+          "lng": 151.199861111,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 11,
+          "via": "MEPIL4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TESAT",
+          "lat": -33.943805556,
+          "lng": 151.182583333,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "MEPIL4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW34L",
+          "lat": -33.964263888888894,
+          "lng": 151.1806472222222,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 445
+    },
+    {
+      "id": "flight-012",
+      "date": "2026-10-25",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "悉尼",
+      "toCity": "墨尔本",
+      "departureRunway": "34L",
+      "arrivalRunway": "27",
+      "sid": "TONTO1",
+      "star": "BOIN1A",
+      "approach": null,
+      "approachTransition": null,
+      "route": "YSSY/34L TONTO1 LEECE Q29 BOOIN BOOIN1A YMML/27",
+      "enroute": [
+        "LEECE",
+        "Q29",
+        "BOOIN"
+      ],
+      "color": "#f2a6cb",
+      "aircraft": "A21N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-25",
+        "flightNumber": "CX437",
+        "aircraft": "A321neo",
+        "icaoType": "A21N",
+        "variant": "A321-251N",
+        "engine": "LEAP-1A32",
+        "registration": "G-NELR",
+        "cruiseFlightLevel": 360,
+        "weightUnit": "kg",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "00:10",
+        "costIndex": 9,
+        "passengers": 170,
+        "tripMinutes": 72,
+        "blockMinutes": 100,
+        "groundDistanceNm": 430,
+        "airDistanceNm": 448,
+        "alternate": "YPAD / ADL",
+        "alternateName": "阿德莱德",
+        "route": "YSSY/34L TONTO1 LEECE Q29 BOOIN BOOIN1A YMML/27",
+        "fuelKg": {
+          "block": 7080,
+          "taxi": 240,
+          "takeoff": 6840,
+          "trip": 2760,
+          "contingency": 573,
+          "alternate": 2556,
+          "finalReserve": 951,
+          "extra": 0
+        },
+        "weightsKg": {
+          "zeroFuel": 64280,
+          "takeoff": 71120,
+          "landing": 68360
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "00:30",
+            "local": "11:30",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "起飞",
+            "utc": "00:50",
+            "local": "11:50",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "落地",
+            "utc": "02:02",
+            "local": "13:02",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "到位",
+            "utc": "02:10",
+            "local": "13:10",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          }
+        ]
+      },
+      "from": "YSSY",
+      "to": "YMML",
+      "points": [
+        {
+          "name": "RW34L",
+          "lat": -33.964263888888894,
+          "lng": 151.1806472222222,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SS500",
+          "lat": -33.831694444,
+          "lng": 151.010972222,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "SS501",
+          "lat": -33.821916667,
+          "lng": 150.952333333,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SS502",
+          "lat": -33.795777778,
+          "lng": 150.796888889,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SS503",
+          "lat": -33.770277778,
+          "lng": 150.646222222,
+          "airport": "YSSY",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NB511",
+          "lat": -33.753555556,
+          "lng": 150.548138889,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NB524",
+          "lat": -33.906888889,
+          "lng": 150.518583333,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KAKNU",
+          "lat": -34.034444444,
+          "lng": 150.575222222,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LAVEB",
+          "lat": -34.114055556,
+          "lng": 150.634333333,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TONTO",
+          "lat": -34.292683333,
+          "lng": 150.644980556,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LEECE",
+          "lat": -35.054194444,
+          "lng": 149.960361111,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "TONTO1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TANTA",
+          "lat": -35.880675,
+          "lng": 148.531736111,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANLID",
+          "lat": -36.117777778,
+          "lng": 148.109166667,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUMIE",
+          "lat": -36.329816667,
+          "lng": 147.728480556,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NABBA",
+          "lat": -36.705333333,
+          "lng": 147.042052778,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BULLA",
+          "lat": -37.077802778,
+          "lng": 146.347116667,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LUVAS",
+          "lat": -37.305972222,
+          "lng": 145.914194444,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BOOIN",
+          "lat": -37.450611111,
+          "lng": 145.638,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "Q29",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ATPER",
+          "lat": -37.546583333,
+          "lng": 145.454972222,
+          "airport": "YMML",
+          "region": "YM",
+          "kind": 11,
+          "via": "BOIN1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAITE",
+          "lat": -37.64725,
+          "lng": 145.261861111,
+          "airport": "YMML",
+          "region": "YM",
+          "kind": 11,
+          "via": "BOIN1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENDUM",
+          "lat": -37.658138889,
+          "lng": 145.156972222,
+          "airport": "YMML",
+          "region": "YM",
+          "kind": 11,
+          "via": "BOIN1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VISAS",
+          "lat": -37.671527778,
+          "lng": 145.026472222,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "BOIN1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW27",
+          "lat": -37.662255555555554,
+          "lng": 144.84809166666668,
+          "airport": "YMML",
+          "region": "YM",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 421
+    },
+    {
+      "id": "flight-013",
+      "date": "2026-10-25",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "墨尔本",
+      "toCity": "基督城",
+      "departureRunway": "16",
+      "arrivalRunway": "02",
+      "sid": "CORRS1",
+      "star": "HODE1A",
+      "approach": null,
+      "approachTransition": null,
+      "route": "YMML/16 CORRS1 CORRS Y260 ECKHO L508 MOLGI HODDE1A NZCH/02",
+      "enroute": [
+        "CORRS",
+        "Y260",
+        "ECKHO",
+        "L508",
+        "MOLGI"
+      ],
+      "color": "#79d7ee",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 2,
+        "planDate": "2026-10-25",
+        "flightNumber": "CX437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "lb",
+        "sourcePages": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "releaseUtc": "03:11",
+        "costIndex": 11,
+        "passengers": 115,
+        "tripMinutes": 173,
+        "blockMinutes": 201,
+        "groundDistanceNm": 1321,
+        "airDistanceNm": 1158,
+        "alternate": "NZAA / AKL",
+        "alternateName": "奥克兰",
+        "route": "YMML/16 CORRS1 CORRS Y260 ECKHO L508 MOLGI HODDE1A NZCH/02",
+        "fuelLb": {
+          "block": 21069,
+          "taxi": 508,
+          "takeoff": 20561,
+          "trip": 11823,
+          "contingency": 1020,
+          "alternate": 4685,
+          "finalReserve": 1834,
+          "extra": 0,
+          "etops": 1199
+        },
+        "weightsLb": {
+          "zeroFuel": 118542,
+          "takeoff": 139103,
+          "landing": 127280
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "03:35",
+            "local": "14:35",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "起飞",
+            "utc": "03:55",
+            "local": "14:55",
+            "zone": "UTC+11",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "落地",
+            "utc": "06:48",
+            "local": "19:48",
+            "zone": "UTC+13",
+            "localDate": "2026-10-25"
+          },
+          {
+            "label": "到位",
+            "utc": "06:56",
+            "local": "19:56",
+            "zone": "UTC+13",
+            "localDate": "2026-10-25"
+          }
+        ],
+        "etopsMinutes": 180,
+        "enrouteAlternate": "NZAA"
+      },
+      "from": "YMML",
+      "to": "NZCH",
+      "points": [
+        {
+          "name": "RW16",
+          "lat": -37.65318055555555,
+          "lng": 144.8349138888889,
+          "airport": "YMML",
+          "region": "YM",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YARRA",
+          "lat": -37.841666667,
+          "lng": 144.87,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "CORRS1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CORRS",
+          "lat": -37.925555556,
+          "lng": 145.613833333,
+          "airport": "ENRT",
+          "region": "YM",
+          "kind": 11,
+          "via": "CORRS1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ECKHO",
+          "lat": -39.657841667,
+          "lng": 150.51775,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "Y260",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KAGRI",
+          "lat": -41.465083333,
+          "lng": 157.833472222,
+          "airport": "ENRT",
+          "region": "YB",
+          "kind": 11,
+          "via": "L508",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OMKIN",
+          "lat": -42.414444444,
+          "lng": 163.0,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "L508",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EKODA",
+          "lat": -43.032022222,
+          "lng": 167.490125,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "L508",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KABIN",
+          "lat": -43.151016667,
+          "lng": 168.552244444,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "L508",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOLGI",
+          "lat": -43.297827778,
+          "lng": 170.015419444,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "L508",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CH739",
+          "lat": -43.3475,
+          "lng": 170.559166667,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DOVEM",
+          "lat": -43.417083333,
+          "lng": 171.376325,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CH503",
+          "lat": -43.539444444,
+          "lng": 171.64,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CH416",
+          "lat": -43.636388889,
+          "lng": 171.850833333,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HODDE",
+          "lat": -43.713036111,
+          "lng": 172.018419444,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CH621",
+          "lat": -43.690833333,
+          "lng": 172.135277778,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IDUBU",
+          "lat": -43.650511111,
+          "lng": 172.344694444,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "HODE1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW02",
+          "lat": -43.49763055555556,
+          "lng": 172.5221138888889,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 1320
     }
   ]
 }
