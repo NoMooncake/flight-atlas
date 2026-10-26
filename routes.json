@@ -6,6 +6,15 @@
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
     {
+      "name": "NZAA",
+      "title": "奥克兰国际",
+      "region": "NZ",
+      "lat": -37.008055556,
+      "lng": 174.791666667,
+      "airport": "NZAA",
+      "kind": 1
+    },
+    {
       "name": "NZCH",
       "title": "基督城国际",
       "region": "NZ",
@@ -4240,6 +4249,322 @@
         "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
       ],
       "distanceNm": 1320
+    },
+    {
+      "id": "flight-014",
+      "date": "2026-10-25",
+      "dateSource": "用户确认今天；SimBrief OFP UTC 日期一致",
+      "fromCity": "基督城",
+      "toCity": "奥克兰",
+      "departureRunway": "20",
+      "arrivalRunway": "23L",
+      "sid": "PEDM2Q",
+      "star": "DAVE7A",
+      "approach": "I23L",
+      "approachTransition": null,
+      "route": "NZCH/20 PEDM2Q GLENN Y175 OMKUN Y655 POKOM Q277 DAVEE DAVE7A NZAA/I23L",
+      "enroute": [
+        "GLENN",
+        "Y175",
+        "OMKUN",
+        "Y655",
+        "POKOM",
+        "Q277",
+        "DAVEE"
+      ],
+      "color": "#c9df83",
+      "aircraft": "A35K",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 2,
+        "planDate": "2026-10-25",
+        "flightNumber": "IB437",
+        "aircraft": "A350-1000",
+        "icaoType": "A35K",
+        "variant": "A350-1000",
+        "engine": "TRENT XWB-97",
+        "registration": "G-KXWB",
+        "cruiseFlightLevel": 390,
+        "weightUnit": "kg",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "22:42",
+        "costIndex": 42,
+        "passengers": 277,
+        "tripMinutes": 68,
+        "blockMinutes": 96,
+        "groundDistanceNm": 441,
+        "airDistanceNm": 439,
+        "alternate": "NZCH / CHC",
+        "alternateName": "基督城",
+        "fuelKg": {
+          "block": 17463,
+          "taxi": 600,
+          "takeoff": 16863,
+          "trip": 6736,
+          "contingency": 1468,
+          "alternate": 6264,
+          "finalReserve": 2395,
+          "extra": 0
+        },
+        "weightsKg": {
+          "zeroFuel": 183808,
+          "takeoff": 200671,
+          "landing": 193935
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "22:20",
+            "local": "11:20",
+            "zone": "UTC+13",
+            "localDate": "2026-10-26"
+          },
+          {
+            "label": "起飞",
+            "utc": "22:40",
+            "local": "11:40",
+            "zone": "UTC+13",
+            "localDate": "2026-10-26"
+          },
+          {
+            "label": "落地",
+            "utc": "23:48",
+            "local": "12:48",
+            "zone": "UTC+13",
+            "localDate": "2026-10-26"
+          },
+          {
+            "label": "到位",
+            "utc": "23:56",
+            "local": "12:56",
+            "zone": "UTC+13",
+            "localDate": "2026-10-26"
+          }
+        ],
+        "route": "NZCH/20 PEDMI2Q GLENN Y175 OMKUN Y655 POKOM Q277 DAVEE DAVEE7A NZAA/23L"
+      },
+      "from": "NZCH",
+      "to": "NZAA",
+      "points": [
+        {
+          "name": "RW20",
+          "lat": -43.47498888888889,
+          "lng": 172.5482861111111,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DER20",
+          "lat": -43.497630556,
+          "lng": 172.522113889,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MEBMU",
+          "lat": -43.540952778,
+          "lng": 172.437038889,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "ANULU",
+          "lat": -43.474186111,
+          "lng": 172.387169444,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUTOR",
+          "lat": -43.45185,
+          "lng": 172.48525,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PEDMI",
+          "lat": -43.423936111,
+          "lng": 172.607202778,
+          "airport": "NZCH",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GLENN",
+          "lat": -42.881163889,
+          "lng": 172.839738889,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "PEDM2Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GULOV",
+          "lat": -41.702969444,
+          "lng": 173.438947222,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y175",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IGUTA",
+          "lat": -40.307288889,
+          "lng": 174.118075,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y175",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AKAVI",
+          "lat": -39.999666667,
+          "lng": 174.263802778,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y175",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OMKUN",
+          "lat": -39.490386111,
+          "lng": 174.501869444,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y175",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "LEBOX",
+          "lat": -39.126183333,
+          "lng": 174.5715,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y655",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "POKOM",
+          "lat": -37.872094444,
+          "lng": 174.806316667,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Y655",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DAVEE",
+          "lat": -37.588725,
+          "lng": 174.809941667,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "Q277",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OSAKU",
+          "lat": -37.425636111,
+          "lng": 174.857897222,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "DAVE7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANSER",
+          "lat": -37.343783333,
+          "lng": 174.881888889,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "DAVE7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AKDER",
+          "lat": -37.148772222,
+          "lng": 174.938852778,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "DAVE7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SABAV",
+          "lat": -37.020825,
+          "lng": 175.072580556,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "DAVE7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EMRAG",
+          "lat": -36.942011111,
+          "lng": 175.038427778,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "DAVE7A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ORESO",
+          "lat": -36.963894444,
+          "lng": 174.959841667,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "I23L",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW23L",
+          "lat": -37.006655555555554,
+          "lng": 174.80574166666668,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 100,
+          "via": "I23L",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 441
     }
   ]
 }
