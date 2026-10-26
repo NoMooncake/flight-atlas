@@ -16,13 +16,28 @@ function mode(id) {
   }
 }
 function message(text) { $('error').textContent = text; $('error').hidden = !text; }
+function journeySummary(flights) {
+  const parts = [];
+  flights.forEach((f,i) => {
+    if (!i || flights[i-1].to !== f.from) parts.push([f.fromCity]);
+    parts.at(-1).push(f.toCity);
+  });
+  return parts.map(cities => cities.join(' → ')).join(' ｜ 另从：');
+}
 function renderList() {
   document.querySelector('.intro .eyebrow').textContent = `我的世界航迹 / 001—${String(data.flights.length).padStart(3,'0')}`;
   document.querySelector('.intro .subtitle').textContent = `从${data.flights[0].fromCity}出发，旅程正在继续。`;
   $('flight-count').textContent = data.flights.length;
   $('airport-count').textContent = data.airports.length;
   $('total-distance').textContent = data.flights.reduce((s,f) => s + f.distanceNm, 0).toLocaleString();
+  $('next-journey').textContent = `下一段旅程，从${data.flights.at(-1).toCity}继续。`;
   data.flights.forEach((f,i) => {
+    if (i && data.flights[i-1].to !== f.from) {
+      const divider = document.createElement('p');
+      divider.className = 'journey-divider';
+      divider.textContent = f.journeyLabel || `从${f.fromCity}继续`;
+      $('flights').append(divider);
+    }
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'flight'; b.dataset.id = f.id;
     b.style.setProperty('--flight-color', f.color); b.setAttribute('aria-pressed','false');
@@ -52,8 +67,9 @@ function renderFlightPlan(f) {
     <p class="plan-notice">以下为 SimBrief 预计值，非实飞时间或实际耗油。</p>
     <div class="plan-highlights"><div><span>预计空中时间</span><strong>${duration(plan.tripMinutes)}</strong></div><div><span>预计轮挡时间</span><strong>${duration(plan.blockMinutes)}</strong></div></div>
     ${rows([['巡航高度',`FL${plan.cruiseFlightLevel} · ${(plan.cruiseFlightLevel*100).toLocaleString('zh-CN')} ft`],['成本指数',`CI ${plan.costIndex}`],['计划乘客',`${plan.passengers} 人`],['计划地面航程',`${plan.groundDistanceNm.toLocaleString('zh-CN')} 海里`],['备降机场',`${plan.alternate} · ${plan.alternateName}`]])}
-    <h3>预计时刻</h3><p class="plan-caption">UTC 日期 ${esc(plan.planDate)} · 当地时间 / UTC</p>
-    <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${t.localDate && t.localDate !== plan.planDate ? `${esc(t.localDate.slice(5))} · ` : ''}${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z</dd></div>`).join('')}</dl>
+    ${plan.cruiseSteps ? rows([['阶梯爬升',plan.cruiseSteps.map(step=>`${step.at} · FL${step.flightLevel}`).join(' → ')]]) : ''}
+    <h3>预计时刻</h3><p class="plan-caption">UTC 起飞日期 ${esc(plan.planDate)} · 当地时间 / UTC</p>
+    <dl class="plan-times">${plan.times.map(t=>`<div><dt>${esc(t.label)}</dt><dd><strong>${esc(t.local)}</strong><small>${t.localDate && t.localDate !== plan.planDate ? `${esc(t.localDate.slice(5))} · ` : ''}${esc(t.zone)}</small></dd><dd>${esc(t.utc)} Z${t.utcDate && t.utcDate !== plan.planDate ? `<small>${esc(t.utcDate.slice(5))}</small>` : ''}</dd></div>`).join('')}</dl>
     <div class="plan-section-heading"><h3>燃油与重量</h3><div class="plan-units" role="group" aria-label="燃油与重量单位"><button type="button" data-plan-unit="kg" aria-pressed="${planWeightUnit==='kg'}">kg</button><button type="button" data-plan-unit="lb" aria-pressed="${planWeightUnit==='lb'}">lb</button></div></div>
     <p class="plan-caption">原始单位：${sourceUnit}。切换单位时换算并取整。</p>
     ${rows([['计划轮挡油量',weight(fuel.block)],['滑行油量',weight(fuel.taxi)],['起飞油量',weight(fuel.takeoff)],['航程耗油',weight(fuel.trip)],['应急油量 · 15 分钟',weight(fuel.contingency)],['备降油量',weight(fuel.alternate)],['最后储备 · 30 分钟',weight(fuel.finalReserve)],...(fuel.etops !== undefined ? [['ETOPS / ETP 额外燃油',weight(fuel.etops)]] : []),['额外油量',weight(fuel.extra)]])}
@@ -81,8 +97,8 @@ function selectFlight(id) {
   $('detail-caption').textContent = f ? `航段 ${String(data.flights.indexOf(f)+1).padStart(2,'0')}` : '旅程进度';
   $('detail-count').textContent = f ? `${f.points.length} 个航点` : `${String(data.flights.length).padStart(2,'0')} / 已抵达`;
   $('detail-title').textContent = f ? `${f.fromCity} → ${f.toCity}` : `此刻，${data.flights.at(-1).toCity}。`;
-  $('detail-description').textContent = f ? `${f.from} / ${f.departureRunway} → ${f.to} / ${f.arrivalRunway} · 航路约 ${f.distanceNm.toLocaleString()} 海里` : [data.flights[0].fromCity,...data.flights.map(f=>f.toCity)].join(' → ');
-  $('route-notes').textContent = f ? f.notes.join(' ') : '';
+  $('detail-description').textContent = f ? `${f.from} / ${f.departureRunway} → ${f.to} / ${f.arrivalRunway} · 航路约 ${f.distanceNm.toLocaleString()} 海里` : journeySummary(data.flights);
+  $('route-notes').textContent = f ? [f.journeyNote,...f.notes].filter(Boolean).join(' ') : (data.flights.at(-1).journeyNote || '');
   if (f) {
     $('raw-route').textContent = f.route;
     $('waypoint-chain').textContent = f.points.map(p=>p.name).join(' → ');

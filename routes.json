@@ -1,10 +1,19 @@
 {
   "title": "飞行足迹",
   "cycle": "2610",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610；新增航班计划数据来自用户提供的 SimBrief OFP",
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
+    {
+      "name": "NFFN",
+      "title": "楠迪国际",
+      "region": "NF",
+      "lat": -17.756388889,
+      "lng": 177.443611111,
+      "airport": "NFFN",
+      "kind": 1
+    },
     {
       "name": "NZAA",
       "title": "奥克兰国际",
@@ -21,6 +30,15 @@
       "lat": -43.489444444,
       "lng": 172.534444444,
       "airport": "NZCH",
+      "kind": 1
+    },
+    {
+      "name": "RPLL",
+      "title": "马尼拉尼诺伊·阿基诺国际",
+      "region": "RP",
+      "lat": 14.51,
+      "lng": 121.013611111,
+      "airport": "RPLL",
       "kind": 1
     },
     {
@@ -4565,6 +4583,622 @@
         "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
       ],
       "distanceNm": 441
+    },
+    {
+      "id": "flight-015",
+      "date": "2026-10-26",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "奥克兰",
+      "toCity": "楠迪",
+      "departureRunway": "05R",
+      "arrivalRunway": "20",
+      "sid": "RAXI3Q",
+      "star": "AGTA2B",
+      "approach": null,
+      "approachTransition": null,
+      "route": "NZAA/05R RAXIN3Q KALAG A578 AGTAG AGTAG2B NFFN/20",
+      "enroute": [
+        "KALAG",
+        "A578",
+        "AGTAG"
+      ],
+      "color": "#eab184",
+      "aircraft": "A359",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-26",
+        "flightNumber": "IB437",
+        "aircraft": "A350-900",
+        "icaoType": "A359",
+        "variant": "A350-900",
+        "engine": "TRENT XWB-84",
+        "registration": "G-NXWB",
+        "cruiseFlightLevel": 300,
+        "weightUnit": "kg",
+        "sourcePages": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "releaseUtc": "19:03",
+        "costIndex": 115,
+        "passengers": 324,
+        "tripMinutes": 163,
+        "blockMinutes": 191,
+        "groundDistanceNm": 1193,
+        "airDistanceNm": 1223,
+        "alternate": "NFNA / SUV",
+        "alternateName": "苏瓦瑙索里",
+        "fuelKg": {
+          "block": 25417,
+          "taxi": 600,
+          "takeoff": 24817,
+          "trip": 18354,
+          "contingency": 1683,
+          "alternate": 2413,
+          "finalReserve": 2367,
+          "extra": 0,
+          "etops": 0
+        },
+        "weightsKg": {
+          "zeroFuel": 173696,
+          "takeoff": 198513,
+          "landing": 180159
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "19:30",
+            "local": "08:30",
+            "zone": "UTC+13",
+            "localDate": "2026-10-27"
+          },
+          {
+            "label": "起飞",
+            "utc": "19:50",
+            "local": "08:50",
+            "zone": "UTC+13",
+            "localDate": "2026-10-27"
+          },
+          {
+            "label": "落地",
+            "utc": "22:33",
+            "local": "10:33",
+            "zone": "UTC+12",
+            "localDate": "2026-10-27"
+          },
+          {
+            "label": "到位",
+            "utc": "22:41",
+            "local": "10:41",
+            "zone": "UTC+12",
+            "localDate": "2026-10-27"
+          }
+        ],
+        "route": "NZAA/05R RAXIN3Q KALAG A578 AGTAG AGTAG2B NFFN/20",
+        "etopsMinutes": 370,
+        "enrouteAlternate": "NZAA / NFFN"
+      },
+      "from": "NZAA",
+      "to": "NFFN",
+      "points": [
+        {
+          "name": "RW05R",
+          "lat": -37.01631666666667,
+          "lng": 174.77078333333336,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "EMRAG",
+          "lat": -36.942011111,
+          "lng": 175.038427778,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "RAXI3Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RAXIN",
+          "lat": -36.460552778,
+          "lng": 175.013730556,
+          "airport": "NZAA",
+          "region": "NZ",
+          "kind": 11,
+          "via": "RAXI3Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KALAG",
+          "lat": -33.694261111,
+          "lng": 175.323830556,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "RAXI3Q",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NISET",
+          "lat": -30.904280556,
+          "lng": 175.731236111,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SAKLO",
+          "lat": -27.788930556,
+          "lng": 176.157477778,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "POREN",
+          "lat": -25.0,
+          "lng": 176.518647222,
+          "airport": "ENRT",
+          "region": "NZ",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AGTEM",
+          "lat": -20.245555556,
+          "lng": 177.099166667,
+          "airport": "ENRT",
+          "region": "NF",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AGTOS",
+          "lat": -19.315897222,
+          "lng": 177.207544444,
+          "airport": "ENRT",
+          "region": "NF",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AGTAG",
+          "lat": -18.413888889,
+          "lng": 177.310555556,
+          "airport": "ENRT",
+          "region": "NF",
+          "kind": 11,
+          "via": "A578",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOTKI",
+          "lat": -17.860641667,
+          "lng": 177.489325,
+          "airport": "NFFN",
+          "region": "NF",
+          "kind": 11,
+          "via": "AGTA2B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW20",
+          "lat": -17.750308333333333,
+          "lng": 177.44723333333334,
+          "airport": "NFFN",
+          "region": "NF",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 1175
+    },
+    {
+      "id": "flight-016",
+      "date": "2026-10-26",
+      "dateSource": "用户提供的 SimBrief OFP UTC 日期",
+      "fromCity": "巴厘岛",
+      "toCity": "马尼拉",
+      "departureRunway": "09",
+      "arrivalRunway": "13",
+      "sid": "DOBM2A",
+      "star": "BUCA1A",
+      "approach": null,
+      "approachTransition": null,
+      "route": "WADD/09 DOBMA2A DOBMA M522 VJN M646 BUCAL BUCAL1A RPLL/13",
+      "enroute": [
+        "DOBMA",
+        "M522",
+        "VJN",
+        "M646",
+        "BUCAL"
+      ],
+      "color": "#cb9af1",
+      "aircraft": "A20N",
+      "simbrief": {
+        "source": "SimBrief OFP",
+        "ofpNumber": 1,
+        "planDate": "2026-10-26",
+        "flightNumber": "IB437",
+        "aircraft": "A320neo",
+        "icaoType": "A20N",
+        "variant": "A320-251N",
+        "engine": "LEAP-1A26",
+        "registration": "G-INEO",
+        "cruiseFlightLevel": 380,
+        "weightUnit": "kg",
+        "sourcePages": [
+          1,
+          2,
+          3
+        ],
+        "releaseUtc": "21:13",
+        "costIndex": 53,
+        "passengers": 120,
+        "tripMinutes": 220,
+        "blockMinutes": 248,
+        "groundDistanceNm": 1526,
+        "airDistanceNm": 1570,
+        "alternate": "RPLC / CRK",
+        "alternateName": "克拉克",
+        "fuelKg": {
+          "block": 9641,
+          "taxi": 230,
+          "takeoff": 9411,
+          "trip": 7280,
+          "contingency": 495,
+          "alternate": 775,
+          "finalReserve": 861,
+          "extra": 0
+        },
+        "weightsKg": {
+          "zeroFuel": 54260,
+          "takeoff": 63671,
+          "landing": 56391
+        },
+        "times": [
+          {
+            "label": "离位",
+            "utc": "21:45",
+            "local": "05:45",
+            "zone": "UTC+8",
+            "localDate": "2026-10-27"
+          },
+          {
+            "label": "起飞",
+            "utc": "22:05",
+            "local": "06:05",
+            "zone": "UTC+8",
+            "localDate": "2026-10-27"
+          },
+          {
+            "label": "落地",
+            "utc": "01:45",
+            "local": "09:45",
+            "zone": "UTC+8",
+            "localDate": "2026-10-27",
+            "utcDate": "2026-10-27"
+          },
+          {
+            "label": "到位",
+            "utc": "01:53",
+            "local": "09:53",
+            "zone": "UTC+8",
+            "localDate": "2026-10-27",
+            "utcDate": "2026-10-27"
+          }
+        ],
+        "route": "WADD/09 DOBMA2A DOBMA M522 VJN M646 BUCAL BUCAL1A RPLL/13",
+        "cruiseSteps": [
+          {
+            "at": "WADD",
+            "flightLevel": 380
+          },
+          {
+            "at": "ELANG",
+            "flightLevel": 390
+          }
+        ]
+      },
+      "from": "WADD",
+      "to": "RPLL",
+      "journeyLabel": "从巴厘岛继续",
+      "journeyNote": "澳新支线已结束；本段从巴厘岛重新出发，后续从马尼拉（RPLL）继续。",
+      "points": [
+        {
+          "name": "RW09",
+          "lat": -8.748944444444444,
+          "lng": 115.15382222222223,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAMAD",
+          "lat": -8.749166667,
+          "lng": 115.464444444,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IKIMA",
+          "lat": -8.607222222,
+          "lng": 115.464722222,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BODID",
+          "lat": -7.945277778,
+          "lng": 115.466111111,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TAPUD",
+          "lat": -7.602777778,
+          "lng": 115.466944444,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NOLAL",
+          "lat": -7.261944444,
+          "lng": 115.4675,
+          "airport": "WADD",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DOBMA",
+          "lat": -6.826666667,
+          "lng": 115.081666667,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "DOBM2A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KEVOK",
+          "lat": -4.340833333,
+          "lng": 114.941666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELANG",
+          "lat": -0.926666667,
+          "lng": 114.834166667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NUGRO",
+          "lat": -0.164166667,
+          "lng": 114.978888889,
+          "airport": "ENRT",
+          "region": "WA",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAMOK",
+          "lat": 4.085,
+          "lng": 115.786666667,
+          "airport": "ENRT",
+          "region": "WI",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELPOX",
+          "lat": 4.887719444,
+          "lng": 115.896127778,
+          "airport": "ENRT",
+          "region": "WB",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELADO",
+          "lat": 5.235811111,
+          "lng": 115.940966667,
+          "airport": "ENRT",
+          "region": "WB",
+          "kind": 11,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VJN",
+          "lat": 5.89925,
+          "lng": 116.033972222,
+          "airport": "ENRT",
+          "region": "WB",
+          "kind": 3,
+          "via": "M522",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RUMEG",
+          "lat": 6.447880556,
+          "lng": 116.418136111,
+          "airport": "ENRT",
+          "region": "WB",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VETAG",
+          "lat": 6.584991667,
+          "lng": 116.5143,
+          "airport": "ENRT",
+          "region": "WB",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OSANU",
+          "lat": 7.69,
+          "lng": 117.293333333,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MIKEL",
+          "lat": 9.076138889,
+          "lng": 118.28825,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PR",
+          "lat": 9.739805556,
+          "lng": 118.770416667,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 3,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NOMYO",
+          "lat": 10.347277778,
+          "lng": 119.049222222,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TOKON",
+          "lat": 11.700527778,
+          "lng": 119.674694444,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLRAX",
+          "lat": 13.316194444,
+          "lng": 120.445694444,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BUCAL",
+          "lat": 13.599888889,
+          "lng": 120.582222222,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "M646",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BALAY",
+          "lat": 13.902666667,
+          "lng": 120.728333333,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "BUCA1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "INDAN",
+          "lat": 14.19025,
+          "lng": 120.8675,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 11,
+          "via": "BUCA1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MIA",
+          "lat": 14.507972222,
+          "lng": 121.021722222,
+          "airport": "ENRT",
+          "region": "RP",
+          "kind": 3,
+          "via": "BUCA1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW13",
+          "lat": 14.522680555555556,
+          "lng": 121.00504444444445,
+          "airport": "RPLL",
+          "region": "RP",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 1512
     }
   ]
 }
