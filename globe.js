@@ -41,7 +41,7 @@ function renderList() {
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'flight'; b.dataset.id = f.id;
     b.style.setProperty('--flight-color', f.color); b.setAttribute('aria-pressed','false');
-    b.innerHTML = `<span class="number">${String(i+1).padStart(2,'0')}</span><span><span class="city-pair">${esc(f.fromCity)}<span class="arrow">→</span>${esc(f.toCity)}</span><span class="route-airports" style="display:block">${esc(f.from)} — ${esc(f.to)}</span><span class="metadata"><span>${esc(f.date ? f.date.replaceAll('-','.') : (f.dateLabel || '日期未记录'))}</span><span>约 ${f.distanceNm} 海里</span></span></span><span class="chevron">›</span>`;
+    b.innerHTML = `<span class="number">${String(i+1).padStart(2,'0')}</span><span><span class="city-pair">${esc(f.fromCity)}<span class="arrow">→</span>${esc(f.toCity)}</span><span class="route-airports" style="display:block">${esc(f.from)} — ${esc(f.to)}</span><span class="metadata"><span>${esc(f.date ? f.date.replaceAll('-','.') : (f.dateLabel || '日期未记录'))}${f.dateEstimated ? '（估记）' : ''}</span><span>约 ${f.distanceNm} 海里</span></span></span><span class="chevron">›</span>`;
     if (f.aircraft) {
       const badge = document.createElement('span');
       badge.className = 'aircraft-badge'; badge.textContent = `${f.aircraft} · SimBrief`;
@@ -75,7 +75,7 @@ function renderFlightPlan(f) {
     ${rows([['计划轮挡油量',weight(fuel.block)],['滑行油量',weight(fuel.taxi)],['起飞油量',weight(fuel.takeoff)],['航程耗油',weight(fuel.trip)],['应急油量 · 15 分钟',weight(fuel.contingency)],['备降油量',weight(fuel.alternate)],['最后储备 · 30 分钟',weight(fuel.finalReserve)],...(fuel.etops !== undefined ? [['ETOPS / ETP 额外燃油',weight(fuel.etops)]] : []),['额外油量',weight(fuel.extra)]])}
     <h3>预计重量</h3>${rows([['零燃油重量',weight(weights.zeroFuel)],['起飞重量',weight(weights.takeoff)],['落地重量',weight(weights.landing)]])}
     ${plan.etopsMinutes ? `<h3>ETOPS 计划</h3>${rows([['规则时间',`${plan.etopsMinutes} 分钟`],['航路备降机场',plan.enrouteAlternate]])}` : ''}
-    <details class="plan-source"><summary>计划来源与原始航路</summary><p>SimBrief OFP ${esc(plan.ofpNumber)} · ${esc(plan.releaseDate || plan.planDate)} ${esc(plan.releaseUtc)} UTC 签发<br>摘要来自计划书第 ${esc(plan.sourcePages.join('、'))} 页。</p><p class="plan-route">${esc(plan.route)}</p><p>程序名称保留 OFP 写法；地图按你提供的航路和 AIRAC 2610 航点重建，距离与 OFP 可能略有差异。</p></details>`;
+    <details class="plan-source"><summary>计划来源与原始航路</summary><p>SimBrief OFP ${esc(plan.ofpNumber)} · ${esc(plan.releaseDate || plan.planDate)} ${esc(plan.releaseUtc)} UTC 签发<br>摘要来自计划书第 ${esc(plan.sourcePages.join('、'))} 页。</p><p class="plan-route">${esc(plan.route)}</p><p>程序名称保留 OFP 写法；地图按你提供的航路和 AIRAC ${esc(f.navCycle || '2610')} 航点重建，距离与 OFP 可能略有差异。</p></details>`;
   panel.querySelectorAll('[data-plan-unit]').forEach(button => button.onclick = () => {
     const sourceOpen = panel.querySelector('.plan-source').open;
     planWeightUnit = button.dataset.planUnit; renderFlightPlan(f);

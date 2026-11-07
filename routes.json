@@ -1,8 +1,8 @@
 {
   "title": "飞行足迹",
-  "cycle": "2610",
-  "updated": "2026-10-27",
-  "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610；新增航班计划数据来自用户提供的 SimBrief OFP",
+  "cycle": "2610 / 2611",
+  "updated": "2026-11-07",
+  "source": "用户航路 + 本机 X-Plane / Navigraph AIRAC 2610 / 2611；历史轨迹保留，SimBrief 计划数据来自用户提供的 OFP",
   "geometry": "按航点重建的计划航路；非实飞记录。程序转弯以点间连线简化。",
   "airports": [
     {
@@ -39,6 +39,33 @@
       "lat": 25.080277778,
       "lng": 121.232222222,
       "airport": "RCTP",
+      "kind": 1
+    },
+    {
+      "name": "RJBB",
+      "title": "大阪关西国际",
+      "region": "RJ",
+      "lat": 34.434166667,
+      "lng": 135.232777778,
+      "airport": "RJBB",
+      "kind": 1
+    },
+    {
+      "name": "RJTT",
+      "title": "东京羽田",
+      "region": "RJ",
+      "lat": 35.553333333,
+      "lng": 139.781111111,
+      "airport": "RJTT",
+      "kind": 1
+    },
+    {
+      "name": "RKSI",
+      "title": "首尔仁川国际",
+      "region": "RK",
+      "lat": 37.4625,
+      "lng": 126.439166667,
+      "airport": "RKSI",
       "kind": 1
     },
     {
@@ -156,6 +183,15 @@
       "lat": -33.946,
       "lng": 151.177111111,
       "airport": "YSSY",
+      "kind": 1
+    },
+    {
+      "name": "ZBAA",
+      "title": "北京首都国际",
+      "region": "ZB",
+      "lat": 40.073333333,
+      "lng": 116.598333333,
+      "airport": "ZBAA",
       "kind": 1
     },
     {
@@ -5496,6 +5532,1405 @@
       ],
       "notes": [],
       "distanceNm": 675
+    },
+    {
+      "id": "flight-018",
+      "date": "2026-11-01",
+      "dateSource": "用户授权在 2026-10-27 至 2026-11-07 之间估记",
+      "fromCity": "台北",
+      "toCity": "大阪",
+      "departureRunway": "05R",
+      "arrivalRunway": "06L",
+      "sid": "MOLK1A",
+      "star": "NIXOVB",
+      "approach": "I06LY",
+      "approachTransition": null,
+      "enroute": [
+        "MOLKA",
+        "M750",
+        "MADOG",
+        "Y53",
+        "NIXOV"
+      ],
+      "route": "RCTP/05R MOLK1A MOLKA M750 MADOG Y53 NIXOV NIXOVB RJBB/I06LY",
+      "color": "#f6c27a",
+      "from": "RCTP",
+      "to": "RJBB",
+      "dateEstimated": true,
+      "navCycle": "2611",
+      "points": [
+        {
+          "name": "RW05R",
+          "lat": 25.061430555555557,
+          "lng": 121.22424722222222,
+          "airport": "RCTP",
+          "region": "RC",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TP064",
+          "lat": 25.113333333,
+          "lng": 121.291666667,
+          "airport": "RCTP",
+          "region": "RC",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "NEPAS",
+          "lat": 25.278333333,
+          "lng": 121.481666667,
+          "airport": "ENRT",
+          "region": "RC",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ROBIN",
+          "lat": 25.419166667,
+          "lng": 122.207777778,
+          "airport": "ENRT",
+          "region": "RC",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PABSO",
+          "lat": 25.639166667,
+          "lng": 122.866111111,
+          "airport": "ENRT",
+          "region": "RC",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KIKIT",
+          "lat": 25.882222222,
+          "lng": 123.592222222,
+          "airport": "ENRT",
+          "region": "RC",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOLKA",
+          "lat": 26.658611111,
+          "lng": 124.0,
+          "airport": "ENRT",
+          "region": "RO",
+          "kind": 11,
+          "via": "MOLK1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MAMOD",
+          "lat": 26.978138889,
+          "lng": 124.428977778,
+          "airport": "ENRT",
+          "region": "RO",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MUMBA",
+          "lat": 27.397755556,
+          "lng": 124.998269444,
+          "airport": "ENRT",
+          "region": "RO",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MELEN",
+          "lat": 29.526138889,
+          "lng": 127.965913889,
+          "airport": "ENRT",
+          "region": "RO",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "INVAM",
+          "lat": 30.231902778,
+          "lng": 128.997777778,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MOMPA",
+          "lat": 30.844675,
+          "lng": 129.915825,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MIDAI",
+          "lat": 31.60585,
+          "lng": 131.370197222,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MADOG",
+          "lat": 32.125191667,
+          "lng": 132.396238889,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "M750",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUC",
+          "lat": 32.755969444,
+          "lng": 132.996647222,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 3,
+          "via": "Y53",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UPGEB",
+          "lat": 33.03175,
+          "lng": 133.462302778,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y53",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENKOV",
+          "lat": 33.304625,
+          "lng": 133.928783333,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y53",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLBUG",
+          "lat": 33.468744444,
+          "lng": 134.212183333,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y53",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NIXOV",
+          "lat": 33.612358333,
+          "lng": 134.461972222,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y53",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIKLO",
+          "lat": 33.742786111,
+          "lng": 134.586788889,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BB650",
+          "lat": 33.872833333,
+          "lng": 134.515277778,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BB651",
+          "lat": 33.959138889,
+          "lng": 134.403416667,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BB652",
+          "lat": 34.074555556,
+          "lng": 134.3395,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "APORA",
+          "lat": 34.201519444,
+          "lng": 134.333397222,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NALTO",
+          "lat": 34.150155556,
+          "lng": 134.720358333,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BERRY",
+          "lat": 34.250544444,
+          "lng": 134.942108333,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "NIXOVB",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BOLAL",
+          "lat": 34.3026,
+          "lng": 135.019111111,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "I06LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW06L",
+          "lat": 34.42857222222222,
+          "lng": 135.20620277777778,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 100,
+          "via": "I06LY",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 968
+    },
+    {
+      "id": "flight-019",
+      "date": "2026-11-04",
+      "dateSource": "用户授权在 2026-10-27 至 2026-11-07 之间估记",
+      "fromCity": "大阪",
+      "toCity": "东京",
+      "departureRunway": "06L",
+      "arrivalRunway": "34L",
+      "sid": "SOVRI1",
+      "star": "XAC1A",
+      "approach": null,
+      "approachTransition": null,
+      "enroute": [
+        "SOVRI",
+        "DCT",
+        "UPRAL",
+        "DCT",
+        "YAGYU",
+        "DCT",
+        "SHTLE",
+        "Y71",
+        "XAC"
+      ],
+      "route": "RJBB/06L SOVRI1 SOVRI DCT UPRAL DCT YAGYU DCT SHTLE Y71 XAC XAC1A RJTT/34L",
+      "color": "#9fb7fa",
+      "from": "RJBB",
+      "to": "RJTT",
+      "dateEstimated": true,
+      "navCycle": "2611",
+      "points": [
+        {
+          "name": "RW06L",
+          "lat": 34.42857222222222,
+          "lng": 135.20620277777778,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DE06L",
+          "lat": 34.451272222,
+          "lng": 135.240022222,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "SOVRI1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KIE",
+          "lat": 34.425738889,
+          "lng": 135.207730556,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 3,
+          "via": "SOVRI1",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "MIMIG",
+          "lat": 34.435383333,
+          "lng": 135.285508333,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "SOVRI1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SOVRI",
+          "lat": 34.439694444,
+          "lng": 135.3204,
+          "airport": "RJBB",
+          "region": "RJ",
+          "kind": 11,
+          "via": "SOVRI1",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "UPRAL",
+          "lat": 34.499666667,
+          "lng": 135.684125,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "DCT",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YAGYU",
+          "lat": 34.544252778,
+          "lng": 135.960572222,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "DCT",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SHTLE",
+          "lat": 34.830819444,
+          "lng": 136.948288889,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "DCT",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GAKKI",
+          "lat": 34.747869444,
+          "lng": 137.680658333,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y71",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SHOOT",
+          "lat": 34.714372222,
+          "lng": 138.030619444,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y71",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ARTIC",
+          "lat": 34.715558333,
+          "lng": 138.804569444,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y71",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SPENS",
+          "lat": 34.714825,
+          "lng": 139.001516667,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y71",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "XAC",
+          "lat": 34.712252778,
+          "lng": 139.414016667,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 3,
+          "via": "Y71",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANZAC",
+          "lat": 34.841338889,
+          "lng": 139.696308333,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TT450",
+          "lat": 34.881666667,
+          "lng": 139.785,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TT451",
+          "lat": 34.838,
+          "lng": 139.959527778,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TT452",
+          "lat": 34.853666667,
+          "lng": 140.100027778,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TT453",
+          "lat": 34.910694444,
+          "lng": 140.223861111,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "WANDA",
+          "lat": 35.032038889,
+          "lng": 140.331697222,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "WEDGE",
+          "lat": 35.150122222,
+          "lng": 139.979588889,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ARLON",
+          "lat": 35.257022222,
+          "lng": 139.983275,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "XAC1A",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW34L",
+          "lat": 35.5366,
+          "lng": 139.78566944444444,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 100,
+          "via": "未指定进近：示意连接",
+          "approxFromPrevious": true
+        }
+      ],
+      "notes": [
+        "未提供具体进近程序；进场末端至跑道以虚线示意，不代表实际进近轨迹。",
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 314
+    },
+    {
+      "id": "flight-020",
+      "date": "2026-11-07",
+      "dateSource": "用户确认今天（2026-11-07）",
+      "fromCity": "东京",
+      "toCity": "首尔",
+      "departureRunway": "34R",
+      "arrivalRunway": "34R",
+      "sid": "BEKL4B",
+      "star": "GUKD2E",
+      "approach": "I34R",
+      "approachTransition": "ENPIL",
+      "enroute": [
+        "BEKLA",
+        "Y18",
+        "PIGAP",
+        "Y182",
+        "BIDIK",
+        "Y16",
+        "SAPRA",
+        "Y685",
+        "GUKDO"
+      ],
+      "route": "RJTT/34R BEKL4B BEKLA Y18 PIGAP Y182 BIDIK Y16 SAPRA Y685 GUKDO GUKD2E RKSI/ENPIL.I34R",
+      "color": "#e8a1cd",
+      "from": "RJTT",
+      "to": "RKSI",
+      "navCycle": "2611",
+      "points": [
+        {
+          "name": "RW34R",
+          "lat": 35.54250555555555,
+          "lng": 139.80315000000002,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ARAKA",
+          "lat": 35.646897222,
+          "lng": 139.844966667,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": true
+        },
+        {
+          "name": "GUGVA",
+          "lat": 35.703883333,
+          "lng": 139.858311111,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OHEDO",
+          "lat": 35.7565,
+          "lng": 139.810722222,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "INTEL",
+          "lat": 35.764725,
+          "lng": 139.727841667,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RAGOS",
+          "lat": 35.828388889,
+          "lng": 139.472563889,
+          "airport": "RJTT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BEKLA",
+          "lat": 35.832961111,
+          "lng": 139.169305556,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "BEKL4B",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLBER",
+          "lat": 35.807686111,
+          "lng": 138.662563889,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y18",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AGSEB",
+          "lat": 35.794777778,
+          "lng": 138.419116667,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y18",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PIGAP",
+          "lat": 35.789211111,
+          "lng": 138.316941667,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y18",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IDMEN",
+          "lat": 35.861163889,
+          "lng": 138.052430556,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y182",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OGISO",
+          "lat": 35.940944444,
+          "lng": 137.755980556,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y182",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AKNOM",
+          "lat": 35.972033333,
+          "lng": 137.639522222,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y182",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIDIK",
+          "lat": 36.012811111,
+          "lng": 137.485994444,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y182",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ADGOM",
+          "lat": 36.008177778,
+          "lng": 136.386930556,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y16",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "MADUL",
+          "lat": 35.983044444,
+          "lng": 134.770286111,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y16",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SUGNO",
+          "lat": 35.961594444,
+          "lng": 133.939413889,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y16",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SAPRA",
+          "lat": 35.823841667,
+          "lng": 130.723675,
+          "airport": "ENRT",
+          "region": "RJ",
+          "kind": 11,
+          "via": "Y16",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BULGA",
+          "lat": 35.935722222,
+          "lng": 129.823444444,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KPO",
+          "lat": 35.977194444,
+          "lng": 129.474527778,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 3,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELAPI",
+          "lat": 36.33725,
+          "lng": 128.847472222,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CUN",
+          "lat": 36.632027778,
+          "lng": 128.325416667,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 3,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BIGOB",
+          "lat": 36.723722222,
+          "lng": 128.164444444,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BASEM",
+          "lat": 36.843666667,
+          "lng": 127.95275,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENSAL",
+          "lat": 36.931666667,
+          "lng": 127.796388889,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GUKDO",
+          "lat": 37.019702778,
+          "lng": 127.639683333,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y685",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "KAKSO",
+          "lat": 37.129055556,
+          "lng": 127.443722222,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE046",
+          "lat": 37.199888889,
+          "lng": 127.316194444,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ELMAP",
+          "lat": 37.271111111,
+          "lng": 127.187472222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TESIK",
+          "lat": 37.271277778,
+          "lng": 126.909583333,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE023",
+          "lat": 37.340777778,
+          "lng": 126.822972222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE022",
+          "lat": 37.387638889,
+          "lng": 126.761222222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE016",
+          "lat": 37.347333333,
+          "lng": 126.689388889,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE017",
+          "lat": 37.29275,
+          "lng": 126.737527778,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE020",
+          "lat": 37.238194444,
+          "lng": 126.785611111,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE024",
+          "lat": 37.183583333,
+          "lng": 126.833611111,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE028",
+          "lat": 37.128972222,
+          "lng": 126.881527778,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "GE027",
+          "lat": 37.081,
+          "lng": 126.796305556,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ENPIL",
+          "lat": 37.160833333,
+          "lng": 126.726111111,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "GUKD2E",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PY019",
+          "lat": 37.189,
+          "lng": 126.667,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "I34R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NIPUT",
+          "lat": 37.230972222,
+          "lng": 126.629972222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "I34R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DALKA",
+          "lat": 37.293222222,
+          "lng": 126.574944444,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "I34R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "PIPAN",
+          "lat": 37.379194444,
+          "lng": 126.498777778,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "I34R",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW34R",
+          "lat": 37.443413888888884,
+          "lng": 126.44172777777779,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 100,
+          "via": "I34R",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [
+        "虚线为引导或非定点航段的示意连接，不能由航路文字唯一还原。"
+      ],
+      "distanceNm": 731
+    },
+    {
+      "id": "flight-021",
+      "date": "2026-11-07",
+      "dateSource": "用户确认今天（2026-11-07）",
+      "fromCity": "首尔",
+      "toCity": "北京",
+      "departureRunway": "34R",
+      "arrivalRunway": "36L",
+      "sid": "NOPI2Y",
+      "star": "DUMA9Z",
+      "approach": "I36LY",
+      "approachTransition": "AA141",
+      "enroute": [
+        "NOPIK",
+        "Y697",
+        "AGAVO",
+        "A591",
+        "IKEKA",
+        "W4",
+        "HCH",
+        "W200",
+        "DOVIV",
+        "W55",
+        "DUMAP"
+      ],
+      "route": "RKSI/34R NOPI2Y NOPIK Y697 AGAVO A591 IKEKA W4 HCH W200 DOVIV W55 DUMAP DUMA9Z ZBAA/AA141.I36LY",
+      "color": "#aeda87",
+      "from": "RKSI",
+      "to": "ZBAA",
+      "navCycle": "2611",
+      "points": [
+        {
+          "name": "RW34R",
+          "lat": 37.443413888888884,
+          "lng": 126.44172777777779,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 100,
+          "via": "起飞跑道",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DE34R",
+          "lat": 37.472808333,
+          "lng": 126.415572222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "NOPI2Y",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YD020",
+          "lat": 37.503694444,
+          "lng": 126.368805556,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "NOPI2Y",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YD040",
+          "lat": 37.508222222,
+          "lng": 126.182472222,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "NOPI2Y",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "YP080",
+          "lat": 37.407361111,
+          "lng": 125.990111111,
+          "airport": "RKSI",
+          "region": "RK",
+          "kind": 11,
+          "via": "NOPI2Y",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NOPIK",
+          "lat": 37.403333333,
+          "lng": 125.651388889,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "NOPI2Y",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "BINIL",
+          "lat": 37.397,
+          "lng": 125.233138889,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y697",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "ANSIM",
+          "lat": 37.389722222,
+          "lng": 124.835833333,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y697",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "NOGON",
+          "lat": 37.380555556,
+          "lng": 124.418055556,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y697",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "OLBIM",
+          "lat": 37.236388889,
+          "lng": 124.130833333,
+          "airport": "ENRT",
+          "region": "RK",
+          "kind": 11,
+          "via": "Y697",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AGAVO",
+          "lat": 37.166666667,
+          "lng": 124.0,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "Y697",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "IKEKA",
+          "lat": 36.831388889,
+          "lng": 123.354166667,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "A591",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "SEBLI",
+          "lat": 37.076388889,
+          "lng": 122.325,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "W4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "WEH",
+          "lat": 37.184258333,
+          "lng": 122.225144444,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "W4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FZ",
+          "lat": 37.451666667,
+          "lng": 121.178333333,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 2,
+          "via": "W4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TEKAM",
+          "lat": 37.586111111,
+          "lng": 120.754722222,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "W4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "HCH",
+          "lat": 37.655,
+          "lng": 120.545,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 3,
+          "via": "W4",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DOVIV",
+          "lat": 38.111111111,
+          "lng": 119.5325,
+          "airport": "ENRT",
+          "region": "ZS",
+          "kind": 11,
+          "via": "W200",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "VIDEL",
+          "lat": 38.361666667,
+          "lng": 118.756111111,
+          "airport": "ENRT",
+          "region": "ZB",
+          "kind": 11,
+          "via": "W55",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "TEMAD",
+          "lat": 38.473333333,
+          "lng": 118.405277778,
+          "airport": "ENRT",
+          "region": "ZB",
+          "kind": 11,
+          "via": "W55",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "DUMAP",
+          "lat": 38.591388889,
+          "lng": 118.029166667,
+          "airport": "ENRT",
+          "region": "ZB",
+          "kind": 11,
+          "via": "W55",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA147",
+          "lat": 38.859166667,
+          "lng": 117.256388889,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA146",
+          "lat": 39.033194444,
+          "lng": 117.179638889,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA145",
+          "lat": 39.384888889,
+          "lng": 117.02325,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA144",
+          "lat": 39.613111111,
+          "lng": 116.920777778,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA143",
+          "lat": 40.048555556,
+          "lng": 116.854666667,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA142",
+          "lat": 40.038055556,
+          "lng": 116.738333333,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA141",
+          "lat": 39.685972222,
+          "lng": 116.792388889,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "DUMA9Z",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "AA440",
+          "lat": 39.671666667,
+          "lng": 116.636888889,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "I36LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "CI36L",
+          "lat": 39.825977778,
+          "lng": 116.613169444,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "I36LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "FI3LY",
+          "lat": 39.979977778,
+          "lng": 116.588947222,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 11,
+          "via": "I36LY",
+          "approxFromPrevious": false
+        },
+        {
+          "name": "RW36L",
+          "lat": 40.07345,
+          "lng": 116.57419166666666,
+          "airport": "ZBAA",
+          "region": "ZB",
+          "kind": 100,
+          "via": "I36LY",
+          "approxFromPrevious": false
+        }
+      ],
+      "notes": [],
+      "distanceNm": 609
     }
   ]
 }
